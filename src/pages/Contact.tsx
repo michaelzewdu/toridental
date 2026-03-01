@@ -6,10 +6,17 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Clock, Zap } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const Contact = () => {
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", phone: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", phone: "", email: "", preferredDate: "", treatment: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -21,7 +28,7 @@ const Contact = () => {
     setSubmitting(true);
     setTimeout(() => {
       toast({ title: "Appointment Request Sent!", description: "We'll get back to you shortly. Thank you!" });
-      setForm({ name: "", phone: "", email: "", message: "" });
+      setForm({ name: "", phone: "", email: "", preferredDate: "", treatment: "", message: "" });
       setSubmitting(false);
     }, 1000);
   };
@@ -54,7 +61,11 @@ const Contact = () => {
                 <Phone className="mt-1 h-5 w-5 shrink-0 text-primary" />
                 <div>
                   <p className="font-medium text-foreground">Phone</p>
-                  <a href="tel:+251911069547" className="text-sm text-primary hover:underline">+251 91 106 9547</a>
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+251911069547" className="text-sm text-primary hover:underline">+251 911 069 547</a>
+                    <a href="tel:+251910297536" className="text-sm text-primary hover:underline">+251 910 297 536</a>
+                    <a href="tel:+251983333355" className="text-sm text-primary hover:underline">+251 983 333 355</a>
+                  </div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -129,7 +140,38 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <Label htmlFor="message">Message</Label>
+                <Label htmlFor="preferredDate">Preferred Date & Time</Label>
+                <Input
+                  id="preferredDate"
+                  type="datetime-local"
+                  value={form.preferredDate}
+                  onChange={(e) => setForm({ ...form, preferredDate: e.target.value })}
+                />
+              </div>
+              <div>
+                <Label htmlFor="treatment">Type of Treatment</Label>
+                <Select value={form.treatment} onValueChange={(val) => setForm({ ...form, treatment: val })}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a treatment" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="preventive">Preventive Dentistry</SelectItem>
+                    <SelectItem value="restorative">Restorative Dentistry</SelectItem>
+                    <SelectItem value="endodontics">Root Canal Treatment</SelectItem>
+                    <SelectItem value="prosthodontics">Tooth Replacement / Crowns</SelectItem>
+                    <SelectItem value="implants">Dental Implants</SelectItem>
+                    <SelectItem value="periodontics">Gum Treatment</SelectItem>
+                    <SelectItem value="surgery">Oral Surgery / Extraction</SelectItem>
+                    <SelectItem value="orthodontics">Orthodontics / Aligners</SelectItem>
+                    <SelectItem value="pediatric">Pediatric Dentistry</SelectItem>
+                    <SelectItem value="cosmetic">Cosmetic / Whitening</SelectItem>
+                    <SelectItem value="emergency">Emergency Care</SelectItem>
+                    <SelectItem value="other">Other / Not Sure</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div>
+                <Label htmlFor="message">Message / Notes</Label>
                 <Textarea
                   id="message"
                   placeholder="Tell us about your dental concern or preferred appointment time..."

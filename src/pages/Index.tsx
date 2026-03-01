@@ -12,21 +12,23 @@ import {
   Star,
   ArrowRight,
   Zap,
+  MapPin,
+  MessageCircle,
 } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const services = [
-  { icon: Zap, title: "24/7 Emergency Care", desc: "Immediate relief for dental emergencies, any time of day or night." },
-  { icon: Baby, title: "Pediatric Dentistry", desc: "Gentle, kid-friendly dental care for your little ones." },
-  { icon: Stethoscope, title: "Orthodontics", desc: "Clear aligners and braces for a perfectly aligned smile." },
-  { icon: Shield, title: "Root Canal Treatment", desc: "Pain-free root canal therapy to save your natural teeth." },
-  { icon: SmilePlus, title: "Cosmetic Dentistry", desc: "Veneers, whitening, and zirconium crowns for your dream smile." },
+  { icon: SmilePlus, title: "Prosthetic Tooth", desc: "State-of-the-art implant and tooth replacement options — both removable and fixed — with high patient satisfaction." },
+  { icon: Stethoscope, title: "Orthodontic Treatment", desc: "Clear aligners and conventional braces with custom treatment planning for complete smile adjustment." },
+  { icon: Zap, title: "Whitening & Cleaning", desc: "Professional teeth whitening and gentle cleaning to remove stains, plaque, and restore natural shine." },
+  { icon: Shield, title: "Endodontic & Restorative Care", desc: "Expert root canal and restorative treatments to save natural teeth and rebuild strength and comfort." },
+  { icon: Baby, title: "Pediatric Dental Care", desc: "Gentle care for growing smiles — preventive checkups and a child-friendly environment that builds confidence." },
 ];
 
 const whyUs = [
-  { icon: Shield, title: "Clean & Hygienic", desc: "Strict sterilization protocols and a spotless clinic environment." },
-  { icon: Heart, title: "Compassionate Doctors", desc: "Patient, caring professionals who put your comfort first." },
-  { icon: Stethoscope, title: "Modern Equipment", desc: "State-of-the-art technology for precise, effective treatment." },
+  { icon: Heart, title: "Personalized Care", desc: "Every treatment plan is tailored to your unique needs and goals." },
+  { icon: Shield, title: "High Quality Standards", desc: "Exceptional dental care with meticulous attention to detail." },
+  { icon: Stethoscope, title: "Modern Environment", desc: "State-of-the-art equipment in a comfortable, welcoming clinic." },
   { icon: Clock, title: "24/7 Availability", desc: "Round-the-clock care — because emergencies don't wait." },
 ];
 
@@ -50,9 +52,9 @@ const Index = () => {
             <span className="text-primary">experience you deserve</span>
           </h1>
           <p className="mb-8 max-w-xl text-lg text-muted-foreground">
-            Tori Speciality Dental Clinic — providing compassionate, professional dental care for the whole family, around the clock.
+            A refined dental experience where clinical excellence meets personalized care. Your smile is our highest priority.
           </p>
-          <div className="flex flex-col gap-3 sm:flex-row">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
             <Button asChild size="lg" className="rounded-full px-8">
               <Link to="/contact">Book Appointment</Link>
             </Button>
@@ -62,6 +64,18 @@ const Index = () => {
                 Call Now
               </a>
             </Button>
+            <Button asChild variant="outline" size="lg" className="rounded-full px-8">
+              <Link to="/contact">
+                <MapPin className="mr-2 h-4 w-4" />
+                Visit the Clinic
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="rounded-full px-8">
+              <Link to="/contact">
+                <MessageCircle className="mr-2 h-4 w-4" />
+                Request a Consultation
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -70,8 +84,8 @@ const Index = () => {
       <section className="container mx-auto px-4 py-16 text-center md:py-20">
         <h2 className="mb-4 text-3xl font-bold text-foreground">Welcome to Tori Dental</h2>
         <p className="mx-auto max-w-2xl text-muted-foreground leading-relaxed">
-          At Tori Speciality Dental Clinic, your comfort and health are our top priorities. Located at BMA Plaza, Gerji Mariam in Addis Ababa,
-          we combine modern technology with compassionate care to deliver exceptional dental services — available 24 hours a day, 7 days a week.
+          Welcome to our clinic, where advanced dentistry, meticulous attention to detail, and exceptional patient care define every visit.
+          It is a refined dental experience where clinical excellence meets personalized care. Your smile is our highest priority.
         </p>
       </section>
 
@@ -106,7 +120,9 @@ const Index = () => {
       {/* Why Choose Us */}
       <section className="container mx-auto px-4 py-16 md:py-20">
         <h2 className="mb-2 text-center text-3xl font-bold text-foreground">Why Choose Tori Dental?</h2>
-        <p className="mb-10 text-center text-muted-foreground">Trusted by families across Addis Ababa</p>
+        <p className="mb-10 text-center text-muted-foreground max-w-2xl mx-auto">
+          We are wholehearted to provide personalized, high-quality and exceptional dental care to help you attain a healthy smile in a very modern and comfortable environment.
+        </p>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {whyUs.map((w) => (
             <div key={w.title} className="text-center">
