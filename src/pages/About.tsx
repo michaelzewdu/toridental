@@ -1,8 +1,15 @@
 import Layout from "@/components/Layout";
-import { Heart, Shield, Eye, Target, Stethoscope, Sparkles } from "lucide-react";
+import { Heart, Shield, Eye, Target, Stethoscope, Sparkles, Lightbulb } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
+const coreValues = [
+  { icon: Heart, title: "Patient-First Care", desc: "Every smile matters. We listen, care deeply, and deliver comfortable, personalized treatment built on trust and respect." },
+  { icon: Shield, title: "Integrity in Practice", desc: "We believe in honesty, transparency, and ethical dentistry — always recommending what is best for our patients." },
+  { icon: Stethoscope, title: "Clinical Excellence", desc: "Through skill, precision, and continuous learning, we strive for outstanding outcomes and lasting results." },
+  { icon: Lightbulb, title: "Driven by Innovation", desc: "We embrace modern technology and forward-thinking techniques to make dental care safer, more efficient, and more enjoyable." },
+];
 
 const About = () => (
   <Layout>
@@ -11,8 +18,7 @@ const About = () => (
       <div className="container mx-auto px-4 text-center">
         <h1 className="mb-4 text-4xl font-bold text-foreground">About Tori Dental</h1>
         <p className="mx-auto max-w-2xl text-muted-foreground">
-          At Tori Speciality Dental Clinic, we believe everyone deserves a healthy, confident smile.
-          Our patient-centered approach combines advanced technology with genuine compassion.
+          Tori Dental Clinic was founded in 2025 by Dr. Amde Ayahun and Dr. Bethlehem Kebede with a vision to deliver high-quality, patient-centered dental care. Since its establishment, the clinic has earned excellent five-star reviews for its professionalism, advanced treatments, and exceptional patient experience.
         </p>
       </div>
     </section>
@@ -27,9 +33,7 @@ const About = () => (
             </div>
             <h2 className="mb-3 text-2xl font-bold text-foreground">Our Mission</h2>
             <p className="text-muted-foreground leading-relaxed">
-              To provide accessible, high-quality dental care to every patient in Addis Ababa and beyond.
-              We are committed to using the latest techniques and technology to deliver painless, effective treatments
-              in a warm and welcoming environment — available 24 hours a day, 7 days a week.
+              Tori Dental Clinic is committed to pioneering the use of advanced dental technology while delivering precise, ethical, and patient-centered care. Our mission is to achieve exceptional clinical outcomes and the highest level of patient satisfaction through innovation, professionalism, and compassion.
             </p>
           </CardContent>
         </Card>
@@ -40,29 +44,22 @@ const About = () => (
             </div>
             <h2 className="mb-3 text-2xl font-bold text-foreground">Our Vision</h2>
             <p className="text-muted-foreground leading-relaxed">
-              To be the most trusted and preferred dental clinic in Ethiopia — known for exceptional patient
-              experiences, clinical excellence, and a genuine commitment to community oral health education and prevention.
+              To become a leading international hub for advanced dental care in East Africa, recognized for clinical excellence, technological innovation, and outstanding patient experience that meets global standards.
             </p>
           </CardContent>
         </Card>
       </div>
     </section>
 
-    {/* Philosophy */}
+    {/* Core Values */}
     <section className="bg-muted py-16">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="mb-4 text-3xl font-bold text-foreground">Patient-Centered Care</h2>
+        <h2 className="mb-4 text-3xl font-bold text-foreground">Our Core Values</h2>
         <p className="mx-auto mb-10 max-w-2xl text-muted-foreground leading-relaxed">
-          Every decision we make starts with our patients. From the moment you walk through our doors,
-          you'll experience a level of care and attention that sets us apart. We listen, we explain,
-          and we work together to find the best treatment plan for your unique needs.
+          The principles that guide everything we do at Tori Dental Clinic.
         </p>
-        <div className="grid gap-6 sm:grid-cols-3">
-          {[
-            { icon: Heart, title: "Compassion First", desc: "We treat every patient with empathy, patience, and respect." },
-            { icon: Stethoscope, title: "Clinical Excellence", desc: "Our doctors pursue continuing education to stay at the forefront of dentistry." },
-            { icon: Sparkles, title: "Comfort & Safety", desc: "A calming environment with strict hygiene standards for your peace of mind." },
-          ].map((v) => (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {coreValues.map((v) => (
             <div key={v.title} className="text-center">
               <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
                 <v.icon className="h-7 w-7" />
@@ -77,19 +74,19 @@ const About = () => (
 
     {/* Doctors */}
     <section className="container mx-auto px-4 py-16">
-      <h2 className="mb-2 text-center text-3xl font-bold text-foreground">Meet Our Doctors</h2>
+      <h2 className="mb-2 text-center text-3xl font-bold text-foreground">Meet Our Founders</h2>
       <p className="mb-10 text-center text-muted-foreground">Experienced, caring professionals dedicated to your smile</p>
       <div className="grid gap-8 md:grid-cols-2 max-w-3xl mx-auto">
         {[
           {
-            name: "Dr. Bethlehem (Dr. Beti)",
-            role: "Lead Dentist & Founder",
-            bio: "With years of experience in general and cosmetic dentistry, Dr. Beti is passionate about creating beautiful, healthy smiles. Known for her gentle approach and meticulous attention to detail, she ensures every patient feels comfortable and well-cared for.",
+            name: "Dr. Amde Ayahun",
+            role: "Co-Founder & Dental Specialist",
+            bio: "Dr. Amde co-founded Tori Dental Clinic with a passion for combining innovation with compassionate care. His expertise in orthodontics and restorative dentistry, calm demeanor, and thorough approach make even the most nervous patients feel at ease.",
           },
           {
-            name: "Dr. Amde",
-            role: "Dental Specialist",
-            bio: "Dr. Amde brings expertise in orthodontics and restorative dentistry to Tori Dental. His calm demeanor and thorough approach make even the most nervous patients feel at ease. He is committed to using the latest techniques for optimal outcomes.",
+            name: "Dr. Bethlehem Kebede (Dr. Beti)",
+            role: "Co-Founder & Lead Dentist",
+            bio: "Dr. Bethlehem co-founded Tori Dental Clinic with a vision for clinical excellence. With deep experience in general and cosmetic dentistry, she is known for her gentle approach, meticulous attention to detail, and ensuring every patient feels comfortable and well-cared for.",
           },
         ].map((doc) => (
           <Card key={doc.name} className="border-0 shadow-md overflow-hidden">
@@ -115,7 +112,7 @@ const About = () => (
         <h2 className="mb-4 text-3xl font-bold text-foreground">Hygiene & Technology</h2>
         <p className="mx-auto max-w-2xl text-muted-foreground leading-relaxed">
           We maintain the highest sterilization and infection control standards. Our clinic is equipped with
-          digital X-rays, modern dental chairs, and advanced diagnostic tools — ensuring precise, safe,
+          digital X-rays, CBCT 3D imaging, intraoral cameras, and advanced diagnostic tools — ensuring precise, safe,
           and comfortable treatment for every patient.
         </p>
         <Button asChild className="mt-8 rounded-full" size="lg">

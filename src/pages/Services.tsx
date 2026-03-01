@@ -11,64 +11,98 @@ import {
   Crown,
   Scissors,
   Sparkles,
+  Search,
+  Heart,
+  Scan,
+  Activity,
+  Wrench,
+  AlertTriangle,
 } from "lucide-react";
 
 const services = [
   {
+    icon: Shield,
+    title: "Preventive Dentistry",
+    desc: "Comprehensive preventive care to keep your smile healthy for life.",
+    items: ["Oral examination / dental checkup", "Dental cleaning (scaling & polishing)", "Deep cleaning (scaling and root planing)", "Fluoride treatment", "Dental sealants", "Oral hygiene instruction", "Diet and caries-risk counseling", "Periodic recall visits"],
+  },
+  {
+    icon: Search,
+    title: "Diagnostic Procedures",
+    desc: "Advanced imaging and diagnostics for precise treatment planning.",
+    items: ["Clinical oral examination", "Dental X-rays (Periapical, Bitewing, Panoramic, Cephalometric)", "CBCT (3D imaging)", "Intraoral camera examination", "Pulp vitality testing", "Periodontal charting", "Oral cancer screening", "TMJ evaluation"],
+  },
+  {
+    icon: Wrench,
+    title: "Restorative Dentistry",
+    desc: "Rebuild and restore damaged teeth to full function and beauty.",
+    items: ["Dental fillings (Composite, Amalgam, Glass ionomer)", "Temporary fillings", "Inlays and onlays", "Core build-up", "Tooth reconstruction", "Post and core"],
+  },
+  {
     icon: Stethoscope,
-    title: "General Dentistry",
-    desc: "Comprehensive exams, cleanings, fillings, and preventive care to keep your smile healthy.",
-    benefits: ["Regular checkups & cleanings", "Cavity detection & fillings", "Gum disease prevention", "Oral cancer screening"],
-    when: "Visit every 6 months for preventive care, or when you notice tooth sensitivity, pain, or bleeding gums.",
+    title: "Endodontics (Root Canal)",
+    desc: "Protect and restore your teeth with expert endodontic care. We treat infections, save natural teeth, and rebuild strength using precise, modern techniques.",
+    items: ["Root canal treatment (Single & Multi-visit)", "Re-root canal treatment", "Pulpotomy & Pulpectomy", "Apexification", "Apicoectomy (root-end surgery)", "Management of dental abscess"],
+  },
+  {
+    icon: Crown,
+    title: "Prosthodontics (Tooth Replacement)",
+    desc: "State-of-the-art implant and tooth replacement options — both removable and fixed — with high patient satisfaction.",
+    items: ["Crowns (Metal, PFM, Zirconia, All-ceramic)", "Dental bridges", "Removable dentures (Complete, Partial, Flexible, Immediate)", "Overdentures", "Implant crowns and bridges", "Full-arch implant prosthesis (All-on-4 / All-on-6)"],
+  },
+  {
+    icon: Scan,
+    title: "Dental Implants",
+    desc: "Permanent tooth replacement with advanced implant solutions.",
+    items: ["Dental implant placement (Immediate & Delayed)", "Bone grafting", "Sinus lift", "Ridge augmentation", "Implant uncovering", "Implant removal", "Implant maintenance"],
+  },
+  {
+    icon: Heart,
+    title: "Periodontics (Gum Treatments)",
+    desc: "Complete gum care from prevention to advanced surgical procedures.",
+    items: ["Gingivitis & Periodontitis treatment", "Scaling and root planing", "Periodontal flap surgery", "Gingivectomy & Gingivoplasty", "Crown lengthening", "Bone grafting (periodontal)", "Guided tissue regeneration (GTR)", "Gum recession treatment & Soft tissue grafts"],
+  },
+  {
+    icon: Scissors,
+    title: "Oral & Maxillofacial Surgery",
+    desc: "Expert surgical care for complex dental and facial conditions.",
+    items: ["Tooth extraction (Simple & Surgical)", "Impacted wisdom tooth removal", "Surgical tooth exposure", "Cyst & Tumor removal", "Biopsy (oral lesions)", "Jaw fracture management", "Orthognathic surgery", "TMJ surgery", "Facial trauma management"],
+  },
+  {
+    icon: SmilePlus,
+    title: "Orthodontics (Teeth Alignment)",
+    desc: "Clear aligners and conventional braces with custom treatment planning for complete smile adjustment and functional bite in the shortest time possible.",
+    items: ["Orthodontic consultation", "Metal, Ceramic, and Lingual braces", "Clear aligners (e.g., Invisalign)", "Retainers (fixed & removable)", "Interceptive orthodontics", "Space maintainers", "Habit-breaking appliances"],
   },
   {
     icon: Baby,
     title: "Pediatric Dentistry",
-    desc: "Gentle, child-friendly dental care in a warm, welcoming environment designed for kids.",
-    benefits: ["Kid-friendly approach", "Fluoride treatments", "Sealants for cavity prevention", "Growth & development monitoring"],
-    when: "Schedule your child's first visit by age 1 or when the first tooth appears. Regular visits every 6 months.",
-  },
-  {
-    icon: SmilePlus,
-    title: "Orthodontics (Aligners)",
-    desc: "Clear aligners and modern orthodontic solutions for a beautifully aligned smile.",
-    benefits: ["Nearly invisible clear aligners", "Custom treatment plans", "Comfortable & removable", "Predictable results with 3D imaging"],
-    when: "If you have crooked teeth, gaps, or bite issues, schedule a consultation to explore your options.",
-  },
-  {
-    icon: Shield,
-    title: "Root Canal Treatment",
-    desc: "Pain-free root canal therapy using modern techniques to save your natural tooth.",
-    benefits: ["Saves natural teeth", "Virtually painless with modern anesthesia", "Prevents infection spread", "Long-lasting results"],
-    when: "Seek treatment for persistent toothache, sensitivity to hot/cold, swollen gums, or a darkened tooth.",
-  },
-  {
-    icon: Scissors,
-    title: "Wisdom Tooth Extraction",
-    desc: "Safe and comfortable removal of impacted or problematic wisdom teeth.",
-    benefits: ["Prevents crowding & misalignment", "Eliminates pain & infection risk", "Quick recovery", "Expert surgical technique"],
-    when: "If wisdom teeth cause pain, swelling, difficulty opening your mouth, or repeated infections.",
-  },
-  {
-    icon: Crown,
-    title: "Zirconium Crowns",
-    desc: "Premium zirconium crowns that look, feel, and function like natural teeth.",
-    benefits: ["Natural translucent appearance", "Exceptional strength & durability", "Biocompatible & stain-resistant", "Minimal tooth reduction"],
-    when: "Recommended for damaged teeth, after root canals, or to replace old metal or porcelain crowns.",
+    desc: "Gentle pediatric dental care designed for growing smiles. Preventive checkups, early treatments, and a child-friendly environment that builds healthy habits and confidence.",
+    items: ["Pediatric dental examination", "Fluoride application", "Sealants for children", "Pediatric fillings", "Pulp therapy for primary teeth", "Stainless steel crowns", "Space maintainers", "Management of early childhood caries", "Behavior management techniques"],
   },
   {
     icon: Sparkles,
-    title: "Cosmetic Dentistry",
-    desc: "Transform your smile with veneers, teeth whitening, and aesthetic treatments.",
-    benefits: ["Professional teeth whitening", "Porcelain veneers", "Smile makeovers", "Tooth reshaping & bonding"],
-    when: "If you're unhappy with discolored, chipped, or unevenly shaped teeth, we can help you design your dream smile.",
+    title: "Cosmetic / Aesthetic Dentistry",
+    desc: "Brighten your smile with professional teeth whitening and aesthetic treatments. Remove stains, plaque, and restore natural shine and freshness.",
+    items: ["Teeth whitening (In-office & Take-home)", "Dental veneers (Porcelain & Composite)", "Smile design / smile makeover", "Tooth reshaping (enameloplasty)", "Cosmetic bonding", "Gum contouring", "Black triangle correction"],
+  },
+  {
+    icon: Activity,
+    title: "TMJ & Occlusion Therapy",
+    desc: "Diagnosis and management of jaw joint disorders and bite problems.",
+    items: ["TMJ disorder evaluation", "Occlusal analysis", "Bite adjustment", "Night guards", "Splints (TMJ appliances)", "Bruxism management"],
   },
   {
     icon: Zap,
-    title: "24/7 Emergency Dental Care",
+    title: "Dental Emergencies",
     desc: "Immediate emergency treatment available around the clock — because emergencies don't wait.",
-    benefits: ["Available 24 hours, 7 days a week", "Immediate pain relief", "Trauma & injury management", "Same-day emergency appointments"],
-    when: "For severe tooth pain, knocked-out or broken teeth, uncontrolled bleeding, swelling, or facial trauma.",
+    items: ["Pain management", "Dental trauma management", "Fractured tooth treatment", "Knocked-out tooth (avulsion) management", "Abscess drainage", "Emergency extractions"],
+  },
+  {
+    icon: AlertTriangle,
+    title: "Special & Advanced Procedures",
+    desc: "Cutting-edge treatments for complex and specialized dental needs.",
+    items: ["Full mouth rehabilitation", "Digital dentistry (CAD/CAM crowns)", "Laser dentistry", "Sedation dentistry (Oral & IV sedation)", "General anesthesia dentistry", "Geriatric dental care", "Special needs dentistry"],
   },
 ];
 
@@ -78,7 +112,7 @@ const Services = () => (
       <div className="container mx-auto px-4 text-center">
         <h1 className="mb-4 text-4xl font-bold text-foreground">Our Services</h1>
         <p className="mx-auto max-w-2xl text-muted-foreground">
-          From routine checkups to complex procedures, Tori Speciality Dental Clinic offers a full range
+          From routine checkups to complex procedures, Tori Speciality Dental Clinic offers a comprehensive range
           of dental services — all under one roof, available 24/7.
         </p>
       </div>
@@ -99,19 +133,15 @@ const Services = () => (
                   <h2 className="mb-2 text-2xl font-bold text-foreground">{s.title}</h2>
                   <p className="mb-4 text-muted-foreground">{s.desc}</p>
                   <div className="mb-4">
-                    <h4 className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">Benefits</h4>
+                    <h4 className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">What We Offer</h4>
                     <ul className="grid gap-1 sm:grid-cols-2">
-                      {s.benefits.map((b) => (
-                        <li key={b} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      {s.items.map((item) => (
+                        <li key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
                           <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
-                          {b}
+                          {item}
                         </li>
                       ))}
                     </ul>
-                  </div>
-                  <div className="mb-4">
-                    <h4 className="mb-1 text-sm font-semibold uppercase tracking-wider text-secondary">When to Seek Treatment</h4>
-                    <p className="text-sm text-muted-foreground">{s.when}</p>
                   </div>
                   <Button asChild className="rounded-full">
                     <Link to="/contact">Book Appointment</Link>
