@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, MapPin, Clock, Facebook, Instagram, Twitter } from "lucide-react";
+import logoDark from "@/assets/logo-dark.png";
 
 const Footer = () => (
   <footer className="border-t border-border bg-foreground text-background">
@@ -7,11 +8,8 @@ const Footer = () => (
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
         <div>
-          <div className="mb-4 flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold">
-              T
-            </div>
-            <span className="text-lg font-bold">Tori Dental</span>
+          <div className="mb-4">
+            <img src={logoDark} alt="Tori Speciality Dental Clinic" className="h-14 w-auto" />
           </div>
           <p className="text-sm text-background/70 leading-relaxed">
             The smile you desire, and the experience you deserve. Providing exceptional dental care in Addis Ababa, 24/7.
