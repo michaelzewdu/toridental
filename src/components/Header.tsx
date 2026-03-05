@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoLight from "@/assets/logo-light.png";
+import logoDark from "@/assets/logo-dark.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -21,7 +21,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:h-20">
         <Link to="/" className="flex items-center">
-          <img src={logoLight} alt="Tori Speciality Dental Clinic" className="h-12 md:h-14 w-auto" />
+          <img src={logoDark} alt="Tori Speciality Dental Clinic" className="h-14 md:h-16 w-auto" />
         </Link>
 
         {/* Desktop nav */}
