@@ -83,18 +83,24 @@ const About = () => (
             name: "Dr. Amde Ayahun",
             role: "Co-Founder & Dental Specialist",
             bio: "Dr. Amde co-founded Tori Dental Clinic with a passion for combining innovation with compassionate care. His expertise in orthodontics and restorative dentistry, calm demeanor, and thorough approach make even the most nervous patients feel at ease.",
+            image: null,
           },
           {
             name: "Dr. Bethlehem Kebede (Dr. Beti)",
             role: "Co-Founder & Lead Dentist",
             bio: "Dr. Bethlehem co-founded Tori Dental Clinic with a vision for clinical excellence. With deep experience in general and cosmetic dentistry, she is known for her gentle approach, meticulous attention to detail, and ensuring every patient feels comfortable and well-cared for.",
+            image: drBetiImg,
           },
         ].map((doc) => (
           <Card key={doc.name} className="border-0 shadow-md overflow-hidden">
-            <div className="h-48 bg-muted flex items-center justify-center">
-              <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 text-primary text-3xl font-bold">
-                {doc.name.charAt(4)}
-              </div>
+            <div className="h-48 bg-muted flex items-center justify-center overflow-hidden">
+              {doc.image ? (
+                <img src={doc.image} alt={doc.name} className="h-full w-full object-cover object-top" />
+              ) : (
+                <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 text-primary text-3xl font-bold">
+                  {doc.name.charAt(4)}
+                </div>
+              )}
             </div>
             <CardContent className="p-6">
               <h3 className="text-xl font-bold text-foreground">{doc.name}</h3>
