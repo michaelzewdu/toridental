@@ -93,7 +93,7 @@ const About = () => (
           },
         ].map((doc) => (
           <Card key={doc.name} className="border-0 shadow-md overflow-hidden">
-            <div className="h-48 bg-muted flex items-center justify-center overflow-hidden">
+            <div className="h-72 bg-muted flex items-center justify-center overflow-hidden">
               {doc.image ? (
                 <img src={doc.image} alt={doc.name} className="h-full w-full object-cover object-top" />
               ) : (
