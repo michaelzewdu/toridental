@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import { Heart, Shield, Eye, Target, Stethoscope, Sparkles, Lightbulb } from "lucide-react";
+import drBetiImg from "@/assets/dr-beti.jpg";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
