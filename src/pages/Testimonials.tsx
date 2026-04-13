@@ -1,10 +1,11 @@
 import Layout from "@/components/Layout";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const testimonials = [
+  { name: "Salifou Issoufou", rating: 5, text: "I recently visited Tori Specialty Dental Clinic and had an outstanding experience with Dr. Betty. From the moment I walked in, the atmosphere was welcoming and calming. Dr. Betty took the time to listen carefully, explain every step clearly, and make sure I felt completely comfortable throughout the visit. The level of care was exceptional — gentle, thorough, and incredibly attentive. It's clear that Dr. Betty genuinely cares about patients' well‑being and goes above and beyond to ensure a positive experience. The clinic is clean, modern, and well‑organized, and the entire team is friendly and professional. I left feeling confident, informed, and well cared for. I highly recommend Dr. Betty and Tori Specialty Dental Clinic to anyone looking for excellent dental care.", link: "https://maps.app.goo.gl/YvN9XD1VtBKwKNF76" },
   { name: "Kidist M.", rating: 5, text: "The best dental experience I've ever had! Dr. Beti was so gentle and thorough. The clinic is spotless, and the staff made me feel completely at ease. My kids actually look forward to their dental visits now." },
   { name: "Dawit T.", rating: 5, text: "I had a severe toothache at 2 AM and Tori Dental was there for me. Within an hour, I was in the chair receiving treatment. Their 24/7 service is a genuine lifesaver. Thank you, Dr. Amde!" },
   { name: "Sara A.", rating: 5, text: "My zirconium crowns look absolutely natural. I can't believe how much my smile has changed. The whole process was painless and the results exceeded my expectations. Highly recommend!" },
@@ -39,7 +40,14 @@ const Testimonials = () => (
                 ))}
               </div>
               <p className="mb-4 text-sm leading-relaxed text-muted-foreground">"{t.text}"</p>
-              <p className="font-semibold text-foreground">{t.name}</p>
+              <div className="flex items-center justify-between">
+                <p className="font-semibold text-foreground">{t.name}</p>
+                {"link" in t && t.link && (
+                  <a href={t.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline">
+                    <ExternalLink className="h-3 w-3" /> Google Review
+                  </a>
+                )}
+              </div>
             </CardContent>
           </Card>
         ))}
