@@ -91,6 +91,12 @@ const About = () => (
             bio: "Dr. Bethlehem co-founded Tori Dental Clinic with a vision for clinical excellence. With deep experience in general and cosmetic dentistry, she is known for her gentle approach, meticulous attention to detail, and ensuring every patient feels comfortable and well-cared for. Not to mention her long experience on pediatric (children) oral care and using child friendly language while maintaining surgical precision.",
             image: drBetiImg,
           },
+          {
+            name: "Dr. Awot G/medhin",
+            role: "Senior Dental Surgeon",
+            bio: "",
+            image: null,
+          },
         ].map((doc) => (
           <Card key={doc.name} className="border-0 shadow-md overflow-hidden">
             <div className="h-72 bg-muted flex items-center justify-center overflow-hidden">
