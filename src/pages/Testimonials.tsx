@@ -40,7 +40,14 @@ const Testimonials = () => (
                 ))}
               </div>
               <p className="mb-4 text-sm leading-relaxed text-muted-foreground">"{t.text}"</p>
-              <p className="font-semibold text-foreground">{t.name}</p>
+              <div className="flex items-center justify-between">
+                <p className="font-semibold text-foreground">{t.name}</p>
+                {"link" in t && t.link && (
+                  <a href={t.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline">
+                    <ExternalLink className="h-3 w-3" /> Google Review
+                  </a>
+                )}
+              </div>
             </CardContent>
           </Card>
         ))}
