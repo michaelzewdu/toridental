@@ -1,8 +1,11 @@
+import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
+const MAX_LENGTH = 200;
 
 const testimonials = [
   { name: "Salifou Issoufou", rating: 5, text: "I recently visited Tori Specialty Dental Clinic and had an outstanding experience with Dr. Betty. From the moment I walked in, the atmosphere was welcoming and calming. Dr. Betty took the time to listen carefully, explain every step clearly, and make sure I felt completely comfortable throughout the visit. The level of care was exceptional — gentle, thorough, and incredibly attentive. It's clear that Dr. Betty genuinely cares about patients' well‑being and goes above and beyond to ensure a positive experience. The clinic is clean, modern, and well‑organized, and the entire team is friendly and professional. I left feeling confident, informed, and well cared for. I highly recommend Dr. Betty and Tori Specialty Dental Clinic to anyone looking for excellent dental care.", link: "https://maps.app.goo.gl/YvN9XD1VtBKwKNF76" },
@@ -20,6 +23,44 @@ const testimonials = [
   { name: "Bereket H.", rating: 5, text: "The hygiene standards here are exceptional. You can see how seriously they take sterilization and cleanliness. Combined with their expertise, I wouldn't go anywhere else in Addis." },
 ];
 
+const TestimonialCard = ({ t }: { t: typeof testimonials[number] }) => {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = t.text.length > MAX_LENGTH;
+  const displayText = isLong && !expanded ? t.text.slice(0, MAX_LENGTH).trimEnd() + "…" : t.text;
+
+  return (
+    <Card className="border-0 shadow-md">
+      <CardContent className="p-6">
+        <div className="mb-3 flex gap-0.5">
+          {Array.from({ length: t.rating }).map((_, i) => (
+            <Star key={i} className="h-4 w-4 fill-primary text-primary" />
+          ))}
+        </div>
+        <p className="mb-1 text-sm leading-relaxed text-muted-foreground">
+          "{displayText}"
+        </p>
+        {isLong && (
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="mb-3 text-xs font-medium text-primary hover:underline"
+          >
+            {expanded ? "Show less" : "Read more"}
+          </button>
+        )}
+        {!isLong && <div className="mb-3" />}
+        <div className="flex items-center justify-between">
+          <p className="font-semibold text-foreground">{t.name}</p>
+          {"link" in t && t.link && (
+            <a href={t.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline">
+              <ExternalLink className="h-3 w-3" /> Google Review
+            </a>
+          )}
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
 const Testimonials = () => (
   <Layout>
     <section className="bg-muted py-16 md:py-20">
@@ -34,24 +75,7 @@ const Testimonials = () => (
     <section className="container mx-auto px-4 py-16">
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {testimonials.map((t) => (
-          <Card key={t.name} className="border-0 shadow-md">
-            <CardContent className="p-6">
-              <div className="mb-3 flex gap-0.5">
-                {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                ))}
-              </div>
-              <p className="mb-4 text-sm leading-relaxed text-muted-foreground">"{t.text}"</p>
-              <div className="flex items-center justify-between">
-                <p className="font-semibold text-foreground">{t.name}</p>
-                {"link" in t && t.link && (
-                  <a href={t.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline">
-                    <ExternalLink className="h-3 w-3" /> Google Review
-                  </a>
-                )}
-              </div>
-            </CardContent>
-          </Card>
+          <TestimonialCard key={t.name} t={t} />
         ))}
       </div>
 
