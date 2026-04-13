@@ -77,7 +77,7 @@ const About = () => (
     <section className="container mx-auto px-4 py-16">
       <h2 className="mb-2 text-center text-3xl font-bold text-foreground">Meet Our Founders</h2>
       <p className="mb-10 text-center text-muted-foreground">Experienced, caring professionals dedicated to your smile</p>
-      <div className="grid gap-8 md:grid-cols-2 max-w-3xl mx-auto">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
         {[
           {
             name: "Dr. Amde Ayahun",
