@@ -81,14 +81,14 @@ const About = () => (
         {[
           {
             name: "Dr. Amde Ayahun",
-            role: "Co-Founder & Dental Specialist",
-            bio: "Dr. Amde co-founded Tori Dental Clinic with a passion for combining innovation with compassionate care. His expertise in orthodontics and restorative dentistry, calm demeanor, and thorough approach make even the most nervous patients feel at ease.",
+            role: "DDS, CEO, Vise Clinical Head at SPMMC",
+            bio: "Dr. Amde co-founded Tori Dental Clinic, at the heart of our practice a highly committed dental surgeon and a successful clinic owner. Recognized by colleagues for exceptional clinical skill and professional integrity providing an attentive, patient centered experience. Every treatment plan is meticulously crafted to ensure superior outcomes and long term oral health for our community. With his applause on endodontic, orthodontic and surgical expertise.",
             image: null,
           },
           {
             name: "Dr. Bethlehem Kebede (Dr. Beti)",
-            role: "Co-Founder & Lead Dentist",
-            bio: "Dr. Bethlehem co-founded Tori Dental Clinic with a vision for clinical excellence. With deep experience in general and cosmetic dentistry, she is known for her gentle approach, meticulous attention to detail, and ensuring every patient feels comfortable and well-cared for.",
+            role: "DDS, Cosmetic and Laser Dentist, Co-Founder & Lead Dentist",
+            bio: "Dr. Bethlehem co-founded Tori Dental Clinic with a vision for clinical excellence. With deep experience in general and cosmetic dentistry, she is known for her gentle approach, meticulous attention to detail, and ensuring every patient feels comfortable and well-cared for. Not to mention her long experience on pediatric (children) oral care and using child friendly language while maintaining surgical precision.",
             image: drBetiImg,
           },
         ].map((doc) => (
