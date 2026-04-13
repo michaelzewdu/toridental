@@ -39,7 +39,7 @@ const Contact = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="mb-4 text-4xl font-bold text-foreground">Contact Us</h1>
           <p className="mx-auto max-w-2xl text-muted-foreground">
-            We're here for you 24/7. Book an appointment, ask a question, or visit us at our clinic.
+            We are available 24/7 for your needs. Please note that after 6:00 PM, our team shifts to emergency response only to ensure we can prioritize urgent situations.
           </p>
         </div>
       </section>
