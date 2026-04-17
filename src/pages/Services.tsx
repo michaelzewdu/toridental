@@ -144,11 +144,24 @@ const Services = () => (
                           {item}
                         </li>
                       ))}
-                    </ul>
+                  </ul>
+                </div>
+                {(s as any).images && (
+                  <div className="mb-4 grid grid-cols-2 gap-3">
+                    {(s as any).images.map((img: string, i: number) => (
+                      <img
+                        key={i}
+                        src={img}
+                        alt={`${s.title} treatment example ${i + 1}`}
+                        loading="lazy"
+                        className="h-40 w-full rounded-lg object-cover"
+                      />
+                    ))}
                   </div>
-                  <Button asChild className="rounded-full">
-                    <Link to="/contact">Book Appointment</Link>
-                  </Button>
+                )}
+                <Button asChild className="rounded-full">
+                  <Link to="/contact">Book Appointment</Link>
+                </Button>
                 </div>
               </div>
             </CardContent>
