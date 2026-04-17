@@ -128,9 +128,23 @@ const Services = () => (
             <CardContent className="p-0">
               <div className={`flex flex-col ${idx % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
                 <div className="flex items-center justify-center bg-muted p-8 md:w-1/3">
-                  <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                    <s.icon className="h-12 w-12" />
-                  </div>
+                  {(s as any).images ? (
+                    <div className="grid w-full grid-cols-2 gap-3 md:grid-cols-1">
+                      {(s as any).images.map((img: string, i: number) => (
+                        <img
+                          key={i}
+                          src={img}
+                          alt={`${s.title} treatment example ${i + 1}`}
+                          loading="lazy"
+                          className="h-40 w-full rounded-lg object-cover md:h-48"
+                        />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                      <s.icon className="h-12 w-12" />
+                    </div>
+                  )}
                 </div>
                 <div className="flex-1 p-6 md:p-8">
                   <h2 className="mb-2 text-2xl font-bold text-foreground">{s.title}</h2>
@@ -144,24 +158,11 @@ const Services = () => (
                           {item}
                         </li>
                       ))}
-                  </ul>
-                </div>
-                {(s as any).images && (
-                  <div className="mb-4 grid grid-cols-2 gap-3">
-                    {(s as any).images.map((img: string, i: number) => (
-                      <img
-                        key={i}
-                        src={img}
-                        alt={`${s.title} treatment example ${i + 1}`}
-                        loading="lazy"
-                        className="h-40 w-full rounded-lg object-cover"
-                      />
-                    ))}
+                    </ul>
                   </div>
-                )}
-                <Button asChild className="rounded-full">
-                  <Link to="/contact">Book Appointment</Link>
-                </Button>
+                  <Button asChild className="rounded-full">
+                    <Link to="/contact">Book Appointment</Link>
+                  </Button>
                 </div>
               </div>
             </CardContent>
