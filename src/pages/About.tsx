@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import { Heart, Shield, Eye, Target, Stethoscope, Sparkles, Lightbulb } from "lucide-react";
 import drBetiImg from "@/assets/dr-beti.jpg";
+import drAmdeImg from "@/assets/dr-amde.png";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -83,7 +84,7 @@ const About = () => (
             name: "Dr. Amde Ayahun",
             role: "DDS, CEO, Vise Clinical Head at SPMMC",
             bio: "Dr. Amde co-founded Tori Dental Clinic, at the heart of our practice a highly committed dental surgeon and a successful clinic owner. Recognized by colleagues for exceptional clinical skill and professional integrity providing an attentive, patient centered experience. Every treatment plan is meticulously crafted to ensure superior outcomes and long term oral health for our community. With his applause on endodontic, orthodontic and surgical expertise.",
-            image: null,
+            image: drAmdeImg,
           },
           {
             name: "Dr. Bethlehem Kebede (Dr. Beti)",
