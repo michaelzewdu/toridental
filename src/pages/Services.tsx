@@ -2,6 +2,8 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import pediatric1 from "@/assets/pediatric-treatment-1.jpg";
+import pediatric2 from "@/assets/pediatric-treatment-2.jpg";
 import {
   Stethoscope,
   Baby,
@@ -79,6 +81,7 @@ const services = [
     title: "Pediatric Dentistry",
     desc: "Gentle pediatric dental care designed for growing smiles. Preventive checkups, early treatments, and a child-friendly environment that builds healthy habits and confidence.",
     items: ["Pediatric dental examination", "Fluoride application", "Sealants for children", "Pediatric fillings", "Pulp therapy for primary teeth", "Stainless steel crowns", "Space maintainers", "Management of early childhood caries", "Behavior management techniques"],
+    images: [pediatric1, pediatric2],
   },
   {
     icon: Sparkles,
@@ -141,11 +144,24 @@ const Services = () => (
                           {item}
                         </li>
                       ))}
-                    </ul>
+                  </ul>
+                </div>
+                {(s as any).images && (
+                  <div className="mb-4 grid grid-cols-2 gap-3">
+                    {(s as any).images.map((img: string, i: number) => (
+                      <img
+                        key={i}
+                        src={img}
+                        alt={`${s.title} treatment example ${i + 1}`}
+                        loading="lazy"
+                        className="h-40 w-full rounded-lg object-cover"
+                      />
+                    ))}
                   </div>
-                  <Button asChild className="rounded-full">
-                    <Link to="/contact">Book Appointment</Link>
-                  </Button>
+                )}
+                <Button asChild className="rounded-full">
+                  <Link to="/contact">Book Appointment</Link>
+                </Button>
                 </div>
               </div>
             </CardContent>
