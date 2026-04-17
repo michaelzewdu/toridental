@@ -102,7 +102,7 @@ const About = () => (
           <Card key={doc.name} className="border-0 shadow-md overflow-hidden">
             <div className="h-72 bg-muted flex items-center justify-center overflow-hidden">
               {doc.image ? (
-                <img src={doc.image} alt={doc.name} className="h-full w-full object-cover object-top" />
+                <img src={doc.image} alt={doc.name} className={`h-full w-full object-cover ${doc.name.includes("Bethlehem") ? "object-top" : "object-center"}`} />
               ) : (
                 <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 text-primary text-3xl font-bold">
                   {doc.name.charAt(4)}
