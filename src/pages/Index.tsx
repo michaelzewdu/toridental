@@ -16,6 +16,9 @@ import {
   MessageCircle,
 } from "lucide-react";
 import Layout from "@/components/Layout";
+import receptionHero from "@/assets/tori-reception-3.jpg";
+import receptionWelcome from "@/assets/tori-reception-1.jpg";
+import receptionCta from "@/assets/tori-reception-2.jpg";
 
 const services = [
   { icon: SmilePlus, title: "Prosthetic Tooth", desc: "State-of-the-art implant and tooth replacement options — both removable and fixed — with high patient satisfaction." },
