@@ -46,8 +46,14 @@ const Index = () => {
     <Layout>
       {/* Hero */}
       <section className="relative overflow-hidden bg-muted">
-        <div className="container mx-auto flex min-h-[520px] flex-col items-center justify-center px-4 py-16 text-center md:py-24">
-          <span className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${receptionHero})` }}
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40 md:from-background/90 md:via-background/70 md:to-background/20" aria-hidden="true" />
+        <div className="container relative mx-auto flex min-h-[520px] flex-col items-center justify-center px-4 py-16 text-center md:items-start md:py-24 md:text-left">
+          <span className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur-sm">
             Open 24 Hours — Addis Ababa
           </span>
           <h1 className="mb-6 max-w-3xl text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
@@ -57,28 +63,49 @@ const Index = () => {
           <p className="mb-8 max-w-xl text-lg text-muted-foreground">
             A refined dental experience where clinical excellence meets personalized care. Your smile is our highest priority.
           </p>
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap md:justify-start sm:justify-center">
             <Button asChild size="lg" className="rounded-full px-8">
               <Link to="/contact">Book Appointment</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="rounded-full px-8">
+            <Button asChild variant="outline" size="lg" className="rounded-full px-8 bg-background/70 backdrop-blur-sm">
               <a href="tel:+251911069547">
                 <Phone className="mr-2 h-4 w-4" />
                 Call Now
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="rounded-full px-8">
+            <Button asChild variant="outline" size="lg" className="rounded-full px-8 bg-background/70 backdrop-blur-sm">
               <Link to="/contact">
                 <MapPin className="mr-2 h-4 w-4" />
                 Visit the Clinic
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="rounded-full px-8">
+            <Button asChild variant="outline" size="lg" className="rounded-full px-8 bg-background/70 backdrop-blur-sm">
               <Link to="/contact">
                 <MessageCircle className="mr-2 h-4 w-4" />
                 Request a Consultation
               </Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Welcome */}
+      <section className="container mx-auto px-4 py-16 md:py-20">
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <div className="relative overflow-hidden rounded-2xl shadow-xl">
+            <img
+              src={receptionWelcome}
+              alt="Tori Speciality Dental Clinic reception and waiting area"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="text-center md:text-left">
+            <h2 className="mb-4 text-3xl font-bold text-foreground">Welcome to Tori Dental</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Welcome to our clinic, where advanced dentistry, meticulous attention to detail, and exceptional patient care define every visit.
+              It is a refined dental experience where clinical excellence meets personalized care. Your smile is our highest priority.
+            </p>
           </div>
         </div>
       </section>
@@ -170,10 +197,16 @@ const Index = () => {
       </section>
 
       {/* CTA Banner */}
-      <section className="bg-primary py-16 text-primary-foreground">
-        <div className="container mx-auto flex flex-col items-center px-4 text-center">
+      <section className="relative overflow-hidden py-16 text-primary-foreground">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${receptionCta})` }}
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-primary/85" aria-hidden="true" />
+        <div className="container relative mx-auto flex flex-col items-center px-4 text-center">
           <h2 className="mb-4 text-3xl font-bold">Ready to Book Your Appointment?</h2>
-          <p className="mb-6 max-w-xl text-primary-foreground/80">
+          <p className="mb-6 max-w-xl text-primary-foreground/90">
             Whether it's a routine checkup or an emergency, we're here for you 24/7. Call us now or schedule your visit online.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
