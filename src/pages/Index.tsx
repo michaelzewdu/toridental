@@ -51,7 +51,7 @@ const Index = () => {
           style={{ backgroundImage: `url(${receptionHero})` }}
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-background/80 md:bg-background/75" aria-hidden="true" />
+        <div className="absolute inset-0 bg-foreground/50 md:bg-foreground/45" aria-hidden="true" />
         <div className="container relative mx-auto flex min-h-[520px] flex-col items-center justify-center px-4 py-16 text-center md:py-24">
           <span className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur-sm">
             Open 24 Hours — Addis Ababa
