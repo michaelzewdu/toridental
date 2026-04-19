@@ -137,14 +137,14 @@ const Services = () => (
               <div className={`flex flex-col ${idx % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
                 <div className="flex items-center justify-center bg-muted p-8 md:w-1/3">
                   {(s as any).images ? (
-                    <div className="grid w-full grid-cols-2 gap-3 md:grid-cols-1">
+                    <div className={`grid w-full gap-3 ${(s as any).images.length > 1 ? "grid-cols-2 md:grid-cols-1" : "grid-cols-1"}`}>
                       {(s as any).images.map((img: string, i: number) => (
                         <img
                           key={i}
                           src={img}
                           alt={`${s.title} treatment example ${i + 1}`}
                           loading="lazy"
-                          className="h-40 w-full rounded-lg object-cover md:h-48"
+                          className={`w-full rounded-lg ${(s as any).images.length > 1 ? "h-40 object-cover md:h-48" : "max-h-80 object-contain"}`}
                         />
                       ))}
                     </div>
