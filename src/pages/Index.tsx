@@ -51,8 +51,8 @@ const Index = () => {
           style={{ backgroundImage: `url(${receptionHero})` }}
           aria-hidden="true"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40 md:from-background/90 md:via-background/70 md:to-background/20" aria-hidden="true" />
-        <div className="container relative mx-auto flex min-h-[520px] flex-col items-center justify-center px-4 py-16 text-center md:items-start md:py-24 md:text-left">
+        <div className="absolute inset-0 bg-background/80 md:bg-background/75" aria-hidden="true" />
+        <div className="container relative mx-auto flex min-h-[520px] flex-col items-center justify-center px-4 py-16 text-center md:py-24">
           <span className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur-sm">
             Open 24 Hours — Addis Ababa
           </span>
@@ -63,7 +63,7 @@ const Index = () => {
           <p className="mb-8 max-w-xl text-lg text-muted-foreground">
             A refined dental experience where clinical excellence meets personalized care. Your smile is our highest priority.
           </p>
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap md:justify-start sm:justify-center">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
             <Button asChild size="lg" className="rounded-full px-8">
               <Link to="/contact">Book Appointment</Link>
             </Button>
