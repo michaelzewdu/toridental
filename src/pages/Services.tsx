@@ -7,6 +7,7 @@ import pediatric2 from "@/assets/pediatric-treatment-2.jpg";
 import endodontic1 from "@/assets/endodontic-1.jpg";
 import endodontic2 from "@/assets/endodontic-2.jpg";
 import endodontic3 from "@/assets/endodontic-3.jpg";
+import geriatric from "@/assets/geriatric.jpg";
 import {
   Stethoscope,
   Baby,
@@ -110,6 +111,7 @@ const services = [
     title: "Special & Advanced Procedures",
     desc: "Cutting-edge treatments for complex and specialized dental needs.",
     items: ["Full mouth rehabilitation", "Digital dentistry (CAD/CAM crowns)", "Laser dentistry", "Sedation dentistry (Oral & IV sedation)", "General anesthesia dentistry", "Geriatric dental care", "Special needs dentistry"],
+    images: [geriatric],
   },
 ];
 
