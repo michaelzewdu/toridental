@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import pediatric1 from "@/assets/pediatric-treatment-1.jpg";
 import pediatric2 from "@/assets/pediatric-treatment-2.jpg";
+import endodontic1 from "@/assets/endodontic-1.jpg";
+import endodontic2 from "@/assets/endodontic-2.jpg";
+import endodontic3 from "@/assets/endodontic-3.jpg";
 import {
   Stethoscope,
   Baby,
@@ -45,6 +48,7 @@ const services = [
     title: "Endodontics (Root Canal)",
     desc: "Protect and restore your teeth with expert endodontic care. We treat infections, save natural teeth, and rebuild strength using precise, modern techniques.",
     items: ["Root canal treatment (Single & Multi-visit)", "Re-root canal treatment", "Pulpotomy & Pulpectomy", "Apexification", "Apicoectomy (root-end surgery)", "Management of dental abscess"],
+    images: [endodontic1, endodontic2, endodontic3],
   },
   {
     icon: Crown,
