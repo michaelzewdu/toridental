@@ -8,6 +8,7 @@ import endodontic1 from "@/assets/endodontic-1.jpg";
 import endodontic2 from "@/assets/endodontic-2.jpg";
 import endodontic3 from "@/assets/endodontic-3.jpg";
 import geriatric from "@/assets/geriatric.jpg";
+import maxillofacial from "@/assets/maxillofacial.jpg";
 import {
   Stethoscope,
   Baby,
@@ -74,6 +75,7 @@ const services = [
     title: "Oral & Maxillofacial Surgery",
     desc: "Expert surgical care for complex dental and facial conditions.",
     items: ["Tooth extraction (Simple & Surgical)", "Impacted wisdom tooth removal", "Surgical tooth exposure", "Cyst & Tumor removal", "Biopsy (oral lesions)", "Jaw fracture management", "Orthognathic surgery", "TMJ surgery", "Facial trauma management"],
+    images: [maxillofacial],
   },
   {
     icon: SmilePlus,
