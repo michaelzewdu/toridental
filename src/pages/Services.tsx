@@ -207,11 +207,6 @@ const Services = () => (
               <div className={`flex flex-col ${idx % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
                 <div className="flex items-center justify-center bg-muted p-8 md:w-1/3">
                   <ServiceMedia service={s} />
-                  {false && (
-                    <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                      <s.icon className="h-12 w-12" />
-                    </div>
-                  )}
                 </div>
                 <div className="flex-1 p-6 md:p-8">
                   <h2 className="mb-2 text-2xl font-bold text-foreground">{s.title}</h2>
