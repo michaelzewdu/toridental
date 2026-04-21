@@ -42,6 +42,11 @@ const services = [
     title: "Preventive Dentistry",
     desc: "Comprehensive preventive care to keep your smile healthy for life.",
     items: ["Oral examination / dental checkup", "Dental cleaning (scaling & polishing)", "Deep cleaning (scaling and root planing)", "Fluoride treatment", "Dental sealants", "Oral hygiene instruction", "Diet and caries-risk counseling", "Periodic recall visits"],
+    slides: [
+      { src: cosmeticBefore, label: "Before" },
+      { src: cosmeticAfter, label: "After" },
+      { src: cosmeticResult, label: "Final Result" },
+    ],
   },
   {
     icon: Search,
@@ -105,11 +110,6 @@ const services = [
     title: "Cosmetic / Aesthetic Dentistry",
     desc: "Brighten your smile with professional teeth whitening and aesthetic treatments. Remove stains, plaque, and restore natural shine and freshness.",
     items: ["Teeth whitening (In-office & Take-home)", "Dental veneers (Porcelain & Composite)", "Smile design / smile makeover", "Tooth reshaping (enameloplasty)", "Cosmetic bonding", "Gum contouring", "Black triangle correction"],
-    slides: [
-      { src: cosmeticBefore, label: "Before" },
-      { src: cosmeticAfter, label: "After" },
-      { src: cosmeticResult, label: "Final Result" },
-    ],
   },
   {
     icon: Activity,
