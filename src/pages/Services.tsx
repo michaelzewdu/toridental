@@ -1,6 +1,13 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import pediatric1 from "@/assets/pediatric-treatment-1.jpg";
 import pediatric2 from "@/assets/pediatric-treatment-2.jpg";
@@ -9,6 +16,9 @@ import endodontic2 from "@/assets/endodontic-2.jpg";
 import endodontic3 from "@/assets/endodontic-3.jpg";
 import geriatric from "@/assets/geriatric.jpg";
 import maxillofacial from "@/assets/maxillofacial.jpg";
+import cosmeticBefore from "@/assets/cosmetic-before.jpg";
+import cosmeticAfter from "@/assets/cosmetic-after.jpg";
+import cosmeticResult from "@/assets/cosmetic-result.jpg";
 import {
   Stethoscope,
   Baby,
@@ -95,6 +105,11 @@ const services = [
     title: "Cosmetic / Aesthetic Dentistry",
     desc: "Brighten your smile with professional teeth whitening and aesthetic treatments. Remove stains, plaque, and restore natural shine and freshness.",
     items: ["Teeth whitening (In-office & Take-home)", "Dental veneers (Porcelain & Composite)", "Smile design / smile makeover", "Tooth reshaping (enameloplasty)", "Cosmetic bonding", "Gum contouring", "Black triangle correction"],
+    slides: [
+      { src: cosmeticBefore, label: "Before" },
+      { src: cosmeticAfter, label: "After" },
+      { src: cosmeticResult, label: "Final Result" },
+    ],
   },
   {
     icon: Activity,
@@ -117,6 +132,61 @@ const services = [
   },
 ];
 
+const ServiceMedia = ({ service }: { service: any }) => {
+  const autoplay = useRef(Autoplay({ delay: 2500, stopOnInteraction: false }));
+
+  if (service.slides) {
+    return (
+      <Carousel
+        className="w-full"
+        opts={{ loop: true }}
+        plugins={[autoplay.current]}
+      >
+        <CarouselContent>
+          {service.slides.map((slide: { src: string; label: string }, i: number) => (
+            <CarouselItem key={i}>
+              <div className="relative">
+                <img
+                  src={slide.src}
+                  alt={`${service.title} ${slide.label}`}
+                  loading="lazy"
+                  className="h-64 w-full rounded-lg object-cover md:h-72"
+                />
+                <span className="absolute left-3 top-3 rounded-full bg-primary px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow">
+                  {slide.label}
+                </span>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+    );
+  }
+
+  if (service.images) {
+    return (
+      <div className={`grid w-full gap-3 ${service.images.length > 1 ? "grid-cols-2 md:grid-cols-1" : "grid-cols-1"}`}>
+        {service.images.map((img: string, i: number) => (
+          <img
+            key={i}
+            src={img}
+            alt={`${service.title} treatment example ${i + 1}`}
+            loading="lazy"
+            className={`w-full rounded-lg ${service.images.length > 1 ? "h-40 object-cover md:h-48" : "max-h-80 object-contain"}`}
+          />
+        ))}
+      </div>
+    );
+  }
+
+  const Icon = service.icon;
+  return (
+    <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+      <Icon className="h-12 w-12" />
+    </div>
+  );
+};
+
 const Services = () => (
   <Layout>
     <section className="bg-muted py-16 md:py-20">
@@ -136,19 +206,8 @@ const Services = () => (
             <CardContent className="p-0">
               <div className={`flex flex-col ${idx % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
                 <div className="flex items-center justify-center bg-muted p-8 md:w-1/3">
-                  {(s as any).images ? (
-                    <div className={`grid w-full gap-3 ${(s as any).images.length > 1 ? "grid-cols-2 md:grid-cols-1" : "grid-cols-1"}`}>
-                      {(s as any).images.map((img: string, i: number) => (
-                        <img
-                          key={i}
-                          src={img}
-                          alt={`${s.title} treatment example ${i + 1}`}
-                          loading="lazy"
-                          className={`w-full rounded-lg ${(s as any).images.length > 1 ? "h-40 object-cover md:h-48" : "max-h-80 object-contain"}`}
-                        />
-                      ))}
-                    </div>
-                  ) : (
+                  <ServiceMedia service={s} />
+                  {false && (
                     <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                       <s.icon className="h-12 w-12" />
                     </div>
