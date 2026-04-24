@@ -21,6 +21,8 @@ import cosmeticAfter from "@/assets/cosmetic-after.jpg";
 import cosmeticResult from "@/assets/cosmetic-result.jpg";
 import restorativeBefore from "@/assets/restorative-before.jpg";
 import restorativeAfter from "@/assets/restorative-after.jpg";
+import restorativeBefore2 from "@/assets/restorative-before-2.jpg";
+import restorativeAfter2 from "@/assets/restorative-after-2.jpg";
 import {
   Stethoscope,
   Baby,
@@ -64,6 +66,8 @@ const services = [
     slides: [
       { src: restorativeBefore, label: "Before" },
       { src: restorativeAfter, label: "After" },
+      { src: restorativeBefore2, label: "Before" },
+      { src: restorativeAfter2, label: "After" },
     ],
   },
   {
