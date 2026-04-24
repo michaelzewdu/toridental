@@ -20,7 +20,7 @@ const About = () => (
       <div className="container mx-auto px-4 text-center">
         <h1 className="mb-4 text-4xl font-bold text-foreground">About Tori Dental</h1>
         <p className="mx-auto max-w-2xl text-muted-foreground">
-          Tori Dental Clinic was founded in 2025 by Dr. Amde Ayahun and Dr. Bethlehem Kebede with a vision to deliver high-quality, patient-centered dental care. Since its establishment, the clinic has earned excellent five-star reviews for its professionalism, advanced treatments, and exceptional patient experience.
+          Tori Dental Clinic was founded in 2025 by Dr. Amde Ayahun and Dr. Betelhem Kebede with a vision to deliver high-quality, patient-centered dental care. Since its establishment, the clinic has earned excellent five-star reviews for its professionalism, advanced treatments, and exceptional patient experience.
         </p>
       </div>
     </section>
@@ -87,9 +87,9 @@ const About = () => (
             image: drAmdeImg,
           },
           {
-            name: "Dr. Bethlehem Kebede (Dr. Beti)",
+            name: "Dr. Betelhem Kebede (Dr. Beti)",
             role: "DDS, Cosmetic and Laser Dentist, Co-Founder & Lead Dentist",
-            bio: "Dr. Bethlehem co-founded Tori Dental Clinic with a vision for clinical excellence. With deep experience in general and cosmetic dentistry, she is known for her gentle approach, meticulous attention to detail, and ensuring every patient feels comfortable and well-cared for. Not to mention her long experience on pediatric (children) oral care and using child friendly language while maintaining surgical precision.",
+            bio: "Dr. Betelhem co-founded Tori Dental Clinic with a vision for clinical excellence. With deep experience in general and cosmetic dentistry, she is known for her gentle approach, meticulous attention to detail, and ensuring every patient feels comfortable and well-cared for. Not to mention her long experience on pediatric (children) oral care and using child friendly language while maintaining surgical precision.",
             image: drBetiImg,
           },
           {
@@ -102,7 +102,7 @@ const About = () => (
           <Card key={doc.name} className="border-0 shadow-md overflow-hidden">
             <div className="h-72 bg-muted flex items-center justify-center overflow-hidden">
               {doc.image ? (
-                <img src={doc.image} alt={doc.name} className={`h-full w-full object-cover ${doc.name.includes("Bethlehem") ? "object-top" : "object-center"}`} />
+                <img src={doc.image} alt={doc.name} className={`h-full w-full object-cover ${doc.name.includes("Betelhem") ? "object-top" : "object-center"}`} />
               ) : (
                 <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 text-primary text-3xl font-bold">
                   {doc.name.charAt(4)}
