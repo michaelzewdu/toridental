@@ -110,15 +110,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Welcome */}
-      <section className="container mx-auto px-4 py-16 text-center md:py-20">
-        <h2 className="mb-4 text-3xl font-bold text-foreground">Welcome to Tori Dental</h2>
-        <p className="mx-auto max-w-2xl text-muted-foreground leading-relaxed">
-          Welcome to our clinic, where advanced dentistry, meticulous attention to detail, and exceptional patient care define every visit.
-          It is a refined dental experience where clinical excellence meets personalized care. Your smile is our highest priority.
-        </p>
-      </section>
-
       {/* Services */}
       <section className="bg-muted py-16 md:py-20">
         <div className="container mx-auto px-4">
