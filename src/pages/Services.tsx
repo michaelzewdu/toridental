@@ -19,6 +19,8 @@ import maxillofacial from "@/assets/maxillofacial.jpg";
 import cosmeticBefore from "@/assets/cosmetic-before.jpg";
 import cosmeticAfter from "@/assets/cosmetic-after.jpg";
 import cosmeticResult from "@/assets/cosmetic-result.jpg";
+import restorativeBefore from "@/assets/restorative-before.jpg";
+import restorativeAfter from "@/assets/restorative-after.jpg";
 import {
   Stethoscope,
   Baby,
@@ -59,6 +61,10 @@ const services = [
     title: "Restorative Dentistry",
     desc: "Rebuild and restore damaged teeth to full function and beauty.",
     items: ["Dental fillings (Composite, Amalgam, Glass ionomer)", "Temporary fillings", "Inlays and onlays", "Core build-up", "Tooth reconstruction", "Post and core"],
+    slides: [
+      { src: restorativeBefore, label: "Before" },
+      { src: restorativeAfter, label: "After" },
+    ],
   },
   {
     icon: Stethoscope,
