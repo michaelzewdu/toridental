@@ -174,18 +174,35 @@ const ServiceMedia = ({ service }: { service: any }) => {
   }
 
   if (service.images) {
+    if (service.images.length > 1) {
+      return (
+        <Carousel
+          className="w-full"
+          opts={{ loop: true }}
+          plugins={[autoplay.current]}
+        >
+          <CarouselContent>
+            {service.images.map((img: string, i: number) => (
+              <CarouselItem key={i}>
+                <img
+                  src={img}
+                  alt={`${service.title} treatment example ${i + 1}`}
+                  loading="lazy"
+                  className="h-64 w-full rounded-lg object-cover md:h-72"
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      );
+    }
     return (
-      <div className={`grid w-full gap-3 ${service.images.length > 1 ? "grid-cols-2 md:grid-cols-1" : "grid-cols-1"}`}>
-        {service.images.map((img: string, i: number) => (
-          <img
-            key={i}
-            src={img}
-            alt={`${service.title} treatment example ${i + 1}`}
-            loading="lazy"
-            className={`w-full rounded-lg ${service.images.length > 1 ? "h-40 object-cover md:h-48" : "max-h-80 object-contain"}`}
-          />
-        ))}
-      </div>
+      <img
+        src={service.images[0]}
+        alt={`${service.title} treatment example`}
+        loading="lazy"
+        className="w-full rounded-lg max-h-80 object-contain"
+      />
     );
   }
 
