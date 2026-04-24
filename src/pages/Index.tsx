@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import {
   Phone,
   Clock,
@@ -16,9 +19,19 @@ import {
   MessageCircle,
 } from "lucide-react";
 import Layout from "@/components/Layout";
-import receptionHero from "@/assets/tori-reception-3.jpg";
 import receptionWelcome from "@/assets/tori-reception-1.jpg";
 import receptionCta from "@/assets/tori-reception-2.jpg";
+import heroSlide1 from "@/assets/hero-reception-1.jpg";
+import heroSlide2 from "@/assets/hero-reception-2.jpg";
+import heroSlide3 from "@/assets/hero-reception-3.jpg";
+import heroSlide4 from "@/assets/hero-reception-4.jpg";
+
+const heroSlides = [
+  { src: heroSlide1, alt: "Tori Speciality Dental Clinic reception with welcoming signage" },
+  { src: heroSlide2, alt: "Tori Speciality Dental Clinic waiting area" },
+  { src: heroSlide3, alt: "Tori Speciality Dental Clinic front desk" },
+  { src: heroSlide4, alt: "Tori Speciality Dental Clinic reception entrance" },
+];
 
 const services = [
   { icon: SmilePlus, title: "Prosthetic Tooth", desc: "State-of-the-art implant and tooth replacement options — both removable and fixed — with high patient satisfaction." },
@@ -42,15 +55,30 @@ const testimonials = [
 ];
 
 const Index = () => {
+  const autoplay = useRef(Autoplay({ delay: 4500, stopOnInteraction: false, stopOnMouseEnter: true }));
+
   return (
     <Layout>
       {/* Hero */}
       <section className="relative overflow-hidden bg-muted">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${receptionHero})` }}
-          aria-hidden="true"
-        />
+        <Carousel
+          opts={{ loop: true }}
+          plugins={[autoplay.current]}
+          className="absolute inset-0"
+        >
+          <CarouselContent className="ml-0 h-full">
+            {heroSlides.map((slide) => (
+              <CarouselItem key={slide.src} className="pl-0 h-full">
+                <div
+                  className="h-full min-h-[520px] w-full bg-cover bg-center"
+                  style={{ backgroundImage: `url(${slide.src})` }}
+                  role="img"
+                  aria-label={slide.alt}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
         <div className="absolute inset-0 bg-foreground/50 md:bg-foreground/45" aria-hidden="true" />
         <div className="container relative mx-auto flex min-h-[520px] flex-col items-center justify-center px-4 py-16 text-center md:py-24">
           <span className="mb-4 inline-block rounded-full bg-background/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-background backdrop-blur-sm">
