@@ -95,7 +95,7 @@ const About = () => (
           {
             name: "Dr. Awot G/medhin",
             role: "Senior Dental Surgeon",
-            bio: "",
+            bio: "A pillar at Tori Specialty Dental Clinic, Dr. Awot offers a rare combination of deep diagnostic expertise and a gentle patient-first philosophy with his top-notch professional skills.",
             image: null,
           },
         ].map((doc) => (
