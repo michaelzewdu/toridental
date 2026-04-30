@@ -23,6 +23,7 @@ import restorativeBefore from "@/assets/restorative-before.jpg";
 import restorativeAfter from "@/assets/restorative-after.jpg";
 import restorativeBefore2 from "@/assets/restorative-before-2.jpg";
 import restorativeAfter2 from "@/assets/restorative-after-2.jpg";
+import diagnosticVideo from "@/assets/diagnostic-procedures.mp4";
 import {
   Stethoscope,
   Baby,
@@ -57,6 +58,7 @@ const services = [
     title: "Diagnostic Procedures",
     desc: "Advanced imaging and diagnostics for precise treatment planning.",
     items: ["Clinical oral examination", "Dental X-rays (Periapical, Bitewing, Panoramic, Cephalometric)", "CBCT (3D imaging)", "Intraoral camera examination", "Pulp vitality testing", "Periodontal charting", "Oral cancer screening", "TMJ evaluation"],
+    video: diagnosticVideo,
   },
   {
     icon: Wrench,
@@ -144,6 +146,19 @@ const services = [
 
 const ServiceMedia = ({ service }: { service: any }) => {
   const autoplay = useRef(Autoplay({ delay: 2500, stopOnInteraction: false }));
+
+  if (service.video) {
+    return (
+      <video
+        src={service.video}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="h-64 w-full rounded-lg object-cover md:h-72"
+      />
+    );
+  }
 
   if (service.slides) {
     return (
