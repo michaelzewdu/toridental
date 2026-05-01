@@ -27,6 +27,10 @@ import restorativeBefore from "@/assets/restorative-before.jpg";
 import restorativeAfter from "@/assets/restorative-after.jpg";
 import restorativeBefore2 from "@/assets/restorative-before-2.jpg";
 import restorativeAfter2 from "@/assets/restorative-after-2.jpg";
+import cosBefore1 from "@/assets/cos-before-1.jpg";
+import cosAfter1 from "@/assets/cos-after-1.jpg";
+import cosBefore2 from "@/assets/cos-before-2.jpg";
+import cosAfter2 from "@/assets/cos-after-2.jpg";
 import diagnosticVideo from "@/assets/diagnostic-procedures.mp4";
 import {
   Stethoscope,
@@ -126,6 +130,12 @@ const services = [
     title: "Cosmetic / Aesthetic Dentistry",
     desc: "Brighten your smile with professional teeth whitening and aesthetic treatments. Remove stains, plaque, and restore natural shine and freshness.",
     items: ["Teeth whitening (In-office & Take-home)", "Dental veneers (Porcelain & Composite)", "Smile design / smile makeover", "Tooth reshaping (enameloplasty)", "Cosmetic bonding", "Gum contouring", "Black triangle correction"],
+    slides: [
+      { src: cosBefore1, label: "Before" },
+      { src: cosAfter1, label: "After" },
+      { src: cosBefore2, label: "Before" },
+      { src: cosAfter2, label: "After" },
+    ],
   },
   {
     icon: Activity,
