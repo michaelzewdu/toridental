@@ -216,7 +216,7 @@ const ServiceMedia = ({ service }: { service: any }) => {
         src={service.images[0]}
         alt={`${service.title} treatment example`}
         loading="lazy"
-        className="w-full rounded-lg max-h-80 object-contain"
+        className="mx-auto rounded-lg max-h-80 object-contain"
       />
     );
   }
