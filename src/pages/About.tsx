@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { Heart, Shield, Eye, Target, Stethoscope, Sparkles, Lightbulb } from "lucide-react";
 import drBetiImg from "@/assets/dr-beti.jpg";
 import drAmdeImg from "@/assets/dr-amde.png";
+import drYosefImg from "@/assets/dr-yosef.jpg";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -97,6 +98,12 @@ const About = () => (
             role: "Senior Dental Surgeon",
             bio: "A pillar at Tori Specialty Dental Clinic, Dr. Awot offers a rare combination of deep diagnostic expertise and a gentle patient-first philosophy with his top-notch professional skills.",
             image: null,
+          },
+          {
+            name: "Dr. Yosef Sisay",
+            role: "Dental Surgeon",
+            bio: "Dr. Yosef brings dedication, precision, and a warm patient-first approach to Tori Dental Clinic, ensuring every patient receives exceptional care in a comfortable environment.",
+            image: drYosefImg,
           },
         ].map((doc) => (
           <Card key={doc.name} className="border-0 shadow-md overflow-hidden">
