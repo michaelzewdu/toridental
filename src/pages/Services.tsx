@@ -11,6 +11,10 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import pediatric1 from "@/assets/pediatric-treatment-1.jpg";
 import pediatric2 from "@/assets/pediatric-treatment-2.jpg";
+import pediatric3 from "@/assets/pediatric-3.jpg";
+import pediatric4 from "@/assets/pediatric-4.webp";
+import pediatric5 from "@/assets/pediatric-5.jpg";
+import pediatric6 from "@/assets/pediatric-6.jpg";
 import endodontic1 from "@/assets/endodontic-1.jpg";
 import endodontic2 from "@/assets/endodontic-2.jpg";
 import endodontic3 from "@/assets/endodontic-3.jpg";
@@ -115,7 +119,7 @@ const services = [
     title: "Pediatric Dentistry",
     desc: "Gentle pediatric dental care designed for growing smiles. Preventive checkups, early treatments, and a child-friendly environment that builds healthy habits and confidence.",
     items: ["Pediatric dental examination", "Fluoride application", "Sealants for children", "Pediatric fillings", "Pulp therapy for primary teeth", "Stainless steel crowns", "Space maintainers", "Management of early childhood caries", "Behavior management techniques"],
-    images: [pediatric1, pediatric2],
+    images: [pediatric1, pediatric2, pediatric3, pediatric4, pediatric5, pediatric6],
   },
   {
     icon: Sparkles,
