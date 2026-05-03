@@ -36,6 +36,8 @@ import cosAfter1 from "@/assets/cos-after-1.jpg";
 import cosBefore2 from "@/assets/cos-before-2.jpg";
 import cosAfter2 from "@/assets/cos-after-2.jpg";
 import specialBefore1 from "@/assets/special-before-1.png";
+import prosthoBefore1 from "@/assets/prostho-before-1.jpg";
+import prosthoAfter1 from "@/assets/prostho-after-1.jpg";
 import diagnosticVideo from "@/assets/diagnostic-procedures.mp4";
 import {
   Stethoscope,
@@ -97,6 +99,10 @@ const services = [
     title: "Prosthodontics (Tooth Replacement)",
     desc: "State-of-the-art implant and tooth replacement options — both removable and fixed — with high patient satisfaction.",
     items: ["Crowns (Metal, PFM, Zirconia, All-ceramic)", "Dental bridges", "Removable dentures (Complete, Partial, Flexible, Immediate)", "Overdentures", "Implant crowns and bridges", "Full-arch implant prosthesis (All-on-4 / All-on-6)"],
+    slides: [
+      { src: prosthoBefore1, label: "Before" },
+      { src: prosthoAfter1, label: "After" },
+    ],
   },
   {
     icon: Scan,
