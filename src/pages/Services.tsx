@@ -27,6 +27,10 @@ import restorativeBefore from "@/assets/restorative-before.jpg";
 import restorativeAfter from "@/assets/restorative-after.jpg";
 import restorativeBefore2 from "@/assets/restorative-before-2.jpg";
 import restorativeAfter2 from "@/assets/restorative-after-2.jpg";
+import implant1 from "@/assets/implant-1.jpg";
+import implant2 from "@/assets/implant-2.jpg";
+import implant3 from "@/assets/implant-3.jpeg";
+import implant4 from "@/assets/implant-4.jpeg";
 import cosBefore1 from "@/assets/cos-before-1.jpg";
 import cosAfter1 from "@/assets/cos-after-1.jpg";
 import cosBefore2 from "@/assets/cos-before-2.jpg";
@@ -98,6 +102,7 @@ const services = [
     title: "Dental Implants",
     desc: "Permanent tooth replacement with advanced implant solutions.",
     items: ["Dental implant placement (Immediate & Delayed)", "Bone grafting", "Sinus lift", "Ridge augmentation", "Implant uncovering", "Implant removal", "Implant maintenance"],
+    images: [implant1, implant2, implant3, implant4],
   },
   {
     icon: Heart,
