@@ -101,7 +101,7 @@ const About = () => (
           },
           {
             name: "Dr. Yosef Sisay",
-            role: "Dental Surgeon",
+            role: "Assistant Prof. of Orthodontics and Dentofacial Orthopedics",
             bio: "Dr. Yosef brings dedication, precision, and a warm patient-first approach to Tori Dental Clinic, ensuring every patient receives exceptional care in a comfortable environment.",
             image: drYosefImg,
           },
