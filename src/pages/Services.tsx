@@ -35,6 +35,7 @@ import cosBefore1 from "@/assets/cos-before-1.jpg";
 import cosAfter1 from "@/assets/cos-after-1.jpg";
 import cosBefore2 from "@/assets/cos-before-2.jpg";
 import cosAfter2 from "@/assets/cos-after-2.jpg";
+import specialBefore1 from "@/assets/special-before-1.png";
 import diagnosticVideo from "@/assets/diagnostic-procedures.mp4";
 import {
   Stethoscope,
@@ -159,7 +160,10 @@ const services = [
     title: "Special & Advanced Procedures",
     desc: "Cutting-edge treatments for complex and specialized dental needs.",
     items: ["Full mouth rehabilitation", "Digital dentistry (CAD/CAM crowns)", "Laser dentistry", "Sedation dentistry (Oral & IV sedation)", "General anesthesia dentistry", "Geriatric dental care", "Special needs dentistry"],
-    images: [geriatric],
+    slides: [
+      { src: specialBefore1, label: "Before" },
+      { src: geriatric, label: "Treatment" },
+    ],
   },
 ];
 
