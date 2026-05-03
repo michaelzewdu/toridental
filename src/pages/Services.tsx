@@ -42,6 +42,7 @@ import ortho1 from "@/assets/ortho-1.jpg";
 import ortho2 from "@/assets/ortho-2.jpg";
 import ortho3 from "@/assets/ortho-3.jpg";
 import ortho4 from "@/assets/ortho-4.jpg";
+import perio1 from "@/assets/perio-1.jpg";
 import diagnosticVideo from "@/assets/diagnostic-procedures.mp4";
 import {
   Stethoscope,
@@ -120,6 +121,7 @@ const services = [
     title: "Periodontics (Gum Treatments)",
     desc: "Complete gum care from prevention to advanced surgical procedures.",
     items: ["Gingivitis & Periodontitis treatment", "Scaling and root planing", "Periodontal flap surgery", "Gingivectomy & Gingivoplasty", "Crown lengthening", "Bone grafting (periodontal)", "Guided tissue regeneration (GTR)", "Gum recession treatment & Soft tissue grafts"],
+    images: [perio1],
   },
   {
     icon: Scissors,
