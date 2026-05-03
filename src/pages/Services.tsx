@@ -38,6 +38,10 @@ import cosAfter2 from "@/assets/cos-after-2.jpg";
 import specialBefore1 from "@/assets/special-before-1.png";
 import prosthoBefore1 from "@/assets/prostho-before-1.jpg";
 import prosthoAfter1 from "@/assets/prostho-after-1.jpg";
+import ortho1 from "@/assets/ortho-1.jpg";
+import ortho2 from "@/assets/ortho-2.jpg";
+import ortho3 from "@/assets/ortho-3.jpg";
+import ortho4 from "@/assets/ortho-4.jpg";
 import diagnosticVideo from "@/assets/diagnostic-procedures.mp4";
 import {
   Stethoscope,
@@ -129,6 +133,7 @@ const services = [
     title: "Orthodontics (Teeth Alignment)",
     desc: "Clear aligners and conventional braces with custom treatment planning for complete smile adjustment and functional bite in the shortest time possible.",
     items: ["Orthodontic consultation", "Metal, Ceramic, and Lingual braces", "Clear aligners (e.g., Invisalign)", "Retainers (fixed & removable)", "Interceptive orthodontics", "Space maintainers", "Habit-breaking appliances"],
+    images: [ortho1, ortho2, ortho3, ortho4],
   },
   {
     icon: Baby,
