@@ -82,7 +82,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-foreground/50 md:bg-foreground/45" aria-hidden="true" />
         <div className="container relative mx-auto flex min-h-[520px] flex-col items-center justify-center px-4 py-16 text-center md:py-24">
           <span className="mb-4 inline-block rounded-full bg-background/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-background backdrop-blur-sm">
-            Open 24 Hours — Addis Ababa
+            Open 24 Hours for Emergencies — Addis Ababa
           </span>
           <h1 className="mb-6 max-w-3xl text-4xl font-bold leading-tight text-background md:text-5xl lg:text-6xl drop-shadow-lg">
             The smile you desire, and the{" "}
