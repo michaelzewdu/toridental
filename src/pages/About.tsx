@@ -119,7 +119,7 @@ const About = () => (
             <CardContent className="p-6">
               <h3 className="text-xl font-bold text-foreground">{doc.name}</h3>
               <p className="mb-3 text-sm font-medium text-primary">{doc.role}</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">{doc.bio}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed text-justify">{doc.bio}</p>
             </CardContent>
           </Card>
         ))}
