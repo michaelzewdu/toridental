@@ -102,7 +102,7 @@ const About = () => (
           {
             name: "Dr. Yosef Sisay",
             role: "Assistant Prof. of Orthodontics and Dentofacial Orthopedics",
-            bio: "Dr. Yosef brings dedication, precision, and a warm patient-first approach to Tori Dental Clinic, ensuring every patient receives exceptional care in a comfortable environment.",
+            bio: "Dr Yosef, orthodontist is a partnership built on trust and communication. He is known for his kindness and compassionate nature, he excels at putting nervous patients at ease and explaining complex procedures in a way that is easy to understand. His dedication goes beyond technical skill; he takes genuine pride in every patient's progress and is passionate about the life-changing confidence a healthy smile brings.",
             image: drYosefImg,
           },
         ].map((doc) => (
