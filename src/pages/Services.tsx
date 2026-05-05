@@ -45,6 +45,9 @@ import ortho2 from "@/assets/ortho-2.jpg";
 import ortho3 from "@/assets/ortho-3.jpg";
 import ortho4 from "@/assets/ortho-4.jpg";
 import perio1 from "@/assets/perio-1.jpg";
+import tmj1 from "@/assets/tmj-1.jpg";
+import tmj2 from "@/assets/tmj-2.jpg";
+import tmj3 from "@/assets/tmj-3.jpg";
 import diagnosticVideo from "@/assets/diagnostic-procedures.mp4";
 import {
   Stethoscope,
@@ -165,6 +168,7 @@ const services = [
     title: "TMJ & Occlusion Therapy",
     desc: "Diagnosis and management of jaw joint disorders and bite problems.",
     items: ["TMJ disorder evaluation", "Occlusal analysis", "Bite adjustment", "Night guards", "Splints (TMJ appliances)", "Bruxism management"],
+    images: [tmj1, tmj2, tmj3],
   },
   {
     icon: Zap,
