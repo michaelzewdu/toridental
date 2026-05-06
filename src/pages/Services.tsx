@@ -248,12 +248,14 @@ const ServiceMedia = ({ service }: { service: any }) => {
           <CarouselContent>
             {service.images.map((img: string, i: number) => (
               <CarouselItem key={i}>
-                <img
-                  src={img}
-                  alt={`${service.title} treatment example ${i + 1}`}
-                  loading="lazy"
-                  className="h-64 w-full rounded-lg object-cover md:h-72"
-                />
+                <div className="flex h-64 w-full items-center justify-center rounded-lg bg-muted md:h-72">
+                  <img
+                    src={img}
+                    alt={`${service.title} treatment example ${i + 1}`}
+                    loading="lazy"
+                    className="max-h-full max-w-full rounded-lg object-contain"
+                  />
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
@@ -296,7 +298,7 @@ const Services = () => (
           <Card key={s.title} className="border-0 shadow-md overflow-hidden">
             <CardContent className="p-0">
               <div className={`flex flex-col ${idx % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}>
-                <div className={`flex items-center justify-center bg-muted p-8 ${s.title === "TMJ & Occlusion Therapy" ? "md:w-1/2" : "md:w-1/3"}`}>
+                <div className="flex items-center justify-center bg-muted p-8 md:w-1/3">
                   <ServiceMedia service={s} />
                 </div>
                 <div className="flex-1 p-6 md:p-8">
