@@ -133,7 +133,7 @@ const services = [
     title: "Periodontics (Gum Treatments)",
     desc: "Complete gum care from prevention to advanced surgical procedures.",
     items: ["Gingivitis & Periodontitis treatment", "Scaling and root planing", "Periodontal flap surgery", "Gingivectomy & Gingivoplasty", "Crown lengthening", "Bone grafting (periodontal)", "Guided tissue regeneration (GTR)", "Gum recession treatment & Soft tissue grafts"],
-    images: [perio1],
+    images: [perio1, perio2],
   },
   {
     icon: Scissors,
