@@ -41,7 +41,7 @@ import prosthoAfter1 from "@/assets/prostho-after-1.jpg";
 import prosthoBefore2 from "@/assets/prostho-before-2.jpg";
 import prosthoAfter2 from "@/assets/prostho-after-2.jpg";
 import prosthoBefore3 from "@/assets/prostho-before-3.png";
-import prosthoAfter3 from "@/assets/prostho-after-3.png";
+import prosthoAfter3 from "@/assets/prostho-after-3.jpg";
 import prosthoBefore4 from "@/assets/prostho-before-4.jpg";
 import prosthoAfter4 from "@/assets/prostho-after-4.jpg";
 import ortho1 from "@/assets/ortho-1.jpg";
