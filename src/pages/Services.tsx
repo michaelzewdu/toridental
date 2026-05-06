@@ -48,6 +48,7 @@ import perio1 from "@/assets/perio-1.jpg";
 import tmj1 from "@/assets/tmj-1.jpg";
 import tmj2 from "@/assets/tmj-2.jpg";
 import tmj3 from "@/assets/tmj-3.jpg";
+import tmj4 from "@/assets/tmj-4.jpg";
 import emergency1 from "@/assets/emergency-1.jpg";
 import emergency2 from "@/assets/emergency-2.jpg";
 import emergency3 from "@/assets/emergency-3.jpg";
@@ -171,7 +172,7 @@ const services = [
     title: "TMJ & Occlusion Therapy",
     desc: "Diagnosis and management of jaw joint disorders and bite problems.",
     items: ["TMJ disorder evaluation", "Occlusal analysis", "Bite adjustment", "Night guards", "Splints (TMJ appliances)", "Bruxism management"],
-    images: [tmj1, tmj2, tmj3],
+    images: [tmj1, tmj2, tmj3, tmj4],
   },
   {
     icon: Zap,
