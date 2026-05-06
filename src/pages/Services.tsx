@@ -40,6 +40,8 @@ import prosthoBefore1 from "@/assets/prostho-before-1.jpg";
 import prosthoAfter1 from "@/assets/prostho-after-1.jpg";
 import prosthoBefore2 from "@/assets/prostho-before-2.jpg";
 import prosthoAfter2 from "@/assets/prostho-after-2.jpg";
+import prosthoBefore3 from "@/assets/prostho-before-3.png";
+import prosthoAfter3 from "@/assets/prostho-after-3.png";
 import ortho1 from "@/assets/ortho-1.jpg";
 import ortho2 from "@/assets/ortho-2.jpg";
 import ortho3 from "@/assets/ortho-3.jpg";
@@ -119,6 +121,8 @@ const services = [
       { src: prosthoAfter1, label: "After" },
       { src: prosthoBefore2, label: "Before" },
       { src: prosthoAfter2, label: "After" },
+      { src: prosthoBefore3, label: "Before" },
+      { src: prosthoAfter3, label: "After" },
     ],
   },
   {
