@@ -45,6 +45,7 @@ import ortho2 from "@/assets/ortho-2.jpg";
 import ortho3 from "@/assets/ortho-3.jpg";
 import ortho4 from "@/assets/ortho-4.jpg";
 import perio1 from "@/assets/perio-1.jpg";
+import perio2 from "@/assets/perio-2.jpg";
 import tmj1 from "@/assets/tmj-1.jpg";
 import tmj2 from "@/assets/tmj-2.jpg";
 import tmj3 from "@/assets/tmj-3.jpg";
