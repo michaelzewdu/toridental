@@ -36,6 +36,10 @@ import cosAfter1 from "@/assets/cos-after-1.jpg";
 import cosBefore2 from "@/assets/cos-before-2.jpg";
 import cosAfter2 from "@/assets/cos-after-2.jpg";
 import specialBefore1 from "@/assets/special-before-1.png";
+import special2 from "@/assets/special-2.jpg";
+import special3 from "@/assets/special-3.jpg";
+import special4 from "@/assets/special-4.jpg";
+import special5 from "@/assets/special-5.jpg";
 import ortho1 from "@/assets/ortho-1.jpg";
 import ortho2 from "@/assets/ortho-2.jpg";
 import ortho3 from "@/assets/ortho-3.jpg";
@@ -189,10 +193,7 @@ const services = [
     title: "Special & Advanced Procedures",
     desc: "Cutting-edge treatments for complex and specialized dental needs.",
     items: ["Full mouth rehabilitation", "Digital dentistry (CAD/CAM crowns)", "Laser dentistry", "Sedation dentistry (Oral & IV sedation)", "General anesthesia dentistry", "Geriatric dental care", "Special needs dentistry"],
-    slides: [
-      { src: specialBefore1, label: "Before" },
-      { src: geriatric, label: "Treatment" },
-    ],
+    images: [specialBefore1, geriatric, special2, special3, special4, special5],
   },
 ];
 
