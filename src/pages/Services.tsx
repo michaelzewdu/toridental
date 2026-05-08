@@ -193,7 +193,14 @@ const services = [
     title: "Special & Advanced Procedures",
     desc: "Cutting-edge treatments for complex and specialized dental needs.",
     items: ["Full mouth rehabilitation", "Digital dentistry (CAD/CAM crowns)", "Laser dentistry", "Sedation dentistry (Oral & IV sedation)", "General anesthesia dentistry", "Geriatric dental care", "Special needs dentistry"],
-    images: [specialBefore1, geriatric, special2, special3, special4, special5],
+    slides: [
+      { src: specialBefore1, label: "Before" },
+      { src: geriatric, label: "Treatment" },
+      { src: special2 },
+      { src: special3 },
+      { src: special4 },
+      { src: special5 },
+    ],
   },
 ];
 
@@ -221,18 +228,20 @@ const ServiceMedia = ({ service }: { service: any }) => {
         plugins={[autoplay.current]}
       >
         <CarouselContent>
-          {service.slides.map((slide: { src: string; label: string }, i: number) => (
+          {service.slides.map((slide: { src: string; label?: string }, i: number) => (
             <CarouselItem key={i}>
               <div className="relative">
                 <img
                   src={slide.src}
-                  alt={`${service.title} ${slide.label}`}
+                  alt={`${service.title}${slide.label ? ` ${slide.label}` : ` ${i + 1}`}`}
                   loading="lazy"
                   className="h-64 w-full rounded-lg object-cover md:h-72"
                 />
-                <span className="absolute left-3 top-3 rounded-full bg-primary px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow">
-                  {slide.label}
-                </span>
+                {slide.label && (
+                  <span className="absolute left-3 top-3 rounded-full bg-primary px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow">
+                    {slide.label}
+                  </span>
+                )}
               </div>
             </CarouselItem>
           ))}
