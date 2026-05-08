@@ -53,6 +53,8 @@ import tmj4 from "@/assets/tmj-4.jpg";
 import emergency1 from "@/assets/emergency-1.jpg";
 import emergency2 from "@/assets/emergency-2.jpg";
 import emergency3 from "@/assets/emergency-3.jpg";
+import emergency4 from "@/assets/emergency-4.jpg";
+import emergency5 from "@/assets/emergency-5.jpg";
 import diagnosticVideo from "@/assets/diagnostic-procedures.mp4";
 import {
   Stethoscope,
@@ -180,7 +182,7 @@ const services = [
     title: "Dental Emergencies",
     desc: "Immediate emergency treatment available around the clock — because emergencies don't wait.",
     items: ["Pain management", "Dental trauma management", "Fractured tooth treatment", "Knocked-out tooth (avulsion) management", "Abscess drainage", "Emergency extractions"],
-    images: [emergency1, emergency2, emergency3],
+    images: [emergency1, emergency2, emergency3, emergency4, emergency5],
   },
   {
     icon: AlertTriangle,
