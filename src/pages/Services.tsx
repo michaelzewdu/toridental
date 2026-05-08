@@ -40,6 +40,8 @@ import ortho1 from "@/assets/ortho-1.jpg";
 import ortho2 from "@/assets/ortho-2.jpg";
 import ortho3 from "@/assets/ortho-3.jpg";
 import ortho4 from "@/assets/ortho-4.jpg";
+import prosthoBefore1 from "@/assets/prostho-before-1.jpg";
+import prosthoAfter1 from "@/assets/prostho-after-1.jpg";
 import perio1 from "@/assets/perio-1.jpg";
 import perio2 from "@/assets/perio-2.jpg";
 import tmj1 from "@/assets/tmj-1.jpg";
@@ -110,6 +112,10 @@ const services = [
     title: "Prosthodontics (Tooth Replacement)",
     desc: "State-of-the-art implant and tooth replacement options — both removable and fixed — with high patient satisfaction.",
     items: ["Crowns (Metal, PFM, Zirconia, All-ceramic)", "Dental bridges", "Removable dentures (Complete, Partial, Flexible, Immediate)", "Overdentures", "Implant crowns and bridges", "Full-arch implant prosthesis (All-on-4 / All-on-6)"],
+    slides: [
+      { src: prosthoBefore1, label: "Before" },
+      { src: prosthoAfter1, label: "After" },
+    ],
   },
   {
     icon: Scan,
