@@ -19,6 +19,7 @@ import endodontic1 from "@/assets/endodontic-1.jpg";
 import endodontic2 from "@/assets/endodontic-2.jpg";
 import endodontic3 from "@/assets/endodontic-3.jpg";
 import endodontic4 from "@/assets/endodontic-4.jpg";
+import endodontic5 from "@/assets/endodontic-5.jpeg";
 import geriatric from "@/assets/geriatric.jpg";
 import maxillofacial2 from "@/assets/maxillofacial-2.jpeg";
 import maxillofacial3 from "@/assets/maxillofacial-3.jpeg";
