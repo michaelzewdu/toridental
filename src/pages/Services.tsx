@@ -18,6 +18,7 @@ import pediatric6 from "@/assets/pediatric-6.jpg";
 import endodontic1 from "@/assets/endodontic-1.jpg";
 import endodontic2 from "@/assets/endodontic-2.jpg";
 import endodontic3 from "@/assets/endodontic-3.jpg";
+import endodontic4 from "@/assets/endodontic-4.jpg";
 import geriatric from "@/assets/geriatric.jpg";
 import maxillofacial from "@/assets/maxillofacial.jpg";
 import cosmeticBefore from "@/assets/cosmetic-before.jpg";
@@ -115,7 +116,7 @@ const services = [
     title: "Endodontics (Root Canal)",
     desc: "Protect and restore your teeth with expert endodontic care. We treat infections, save natural teeth, and rebuild strength using precise, modern techniques.",
     items: ["Root canal treatment (Single & Multi-visit)", "Re-root canal treatment", "Pulpotomy & Pulpectomy", "Apexification", "Apicoectomy (root-end surgery)", "Management of dental abscess"],
-    images: [endodontic1, endodontic2, endodontic3],
+    images: [endodontic1, endodontic2, endodontic3, endodontic4],
   },
   {
     icon: Crown,
