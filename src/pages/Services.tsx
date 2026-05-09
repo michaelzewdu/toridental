@@ -20,7 +20,8 @@ import endodontic2 from "@/assets/endodontic-2.jpg";
 import endodontic3 from "@/assets/endodontic-3.jpg";
 import endodontic4 from "@/assets/endodontic-4.jpg";
 import geriatric from "@/assets/geriatric.jpg";
-import maxillofacial from "@/assets/maxillofacial.jpg";
+import maxillofacial2 from "@/assets/maxillofacial-2.jpeg";
+import maxillofacial3 from "@/assets/maxillofacial-3.jpeg";
 import cosmeticBefore from "@/assets/cosmetic-before.jpg";
 import cosmeticAfter from "@/assets/cosmetic-after.jpg";
 import cosmeticResult from "@/assets/cosmetic-result.jpg";
@@ -151,7 +152,7 @@ const services = [
     title: "Oral & Maxillofacial Surgery",
     desc: "Expert surgical care for complex dental and facial conditions.",
     items: ["Tooth extraction (Simple & Surgical)", "Impacted wisdom tooth removal", "Surgical tooth exposure", "Cyst & Tumor removal", "Biopsy (oral lesions)", "Jaw fracture management", "Orthognathic surgery", "TMJ surgery", "Facial trauma management"],
-    images: [maxillofacial],
+    images: [maxillofacial2, maxillofacial3],
   },
   {
     icon: SmilePlus,
