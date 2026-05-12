@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { sendToTelegram } from "@/lib/telegram";
 import { MapPin, Phone, Clock, Zap } from "lucide-react";
 import {
   Select,
@@ -19,18 +20,30 @@ const Contact = () => {
   const [form, setForm] = useState({ name: "", phone: "", email: "", preferredDate: "", treatment: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.phone) {
       toast({ title: "Please fill in required fields", description: "Name and phone number are required.", variant: "destructive" });
       return;
     }
     setSubmitting(true);
-    setTimeout(() => {
-      toast({ title: "Appointment Request Sent!", description: "We'll get back to you shortly. Thank you!" });
+    
+    try {
+      const telegramSent = await sendToTelegram(form);
+      
+      if (telegramSent) {
+        toast({ title: "Appointment Request Sent!", description: "We'll get back to you shortly. Thank you!" });
+      } else {
+        toast({ title: "Request submitted", description: "We'll contact you shortly, though there was an issue with the notification system." });
+      }
+      
       setForm({ name: "", phone: "", email: "", preferredDate: "", treatment: "", message: "" });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({ title: "Error", description: "There was an error submitting your request. Please try again.", variant: "destructive" });
+    } finally {
       setSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
