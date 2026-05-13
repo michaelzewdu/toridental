@@ -10,11 +10,8 @@ import {
   Shield,
   Heart,
   Stethoscope,
-  Baby,
-  SmilePlus,
   Star,
   ArrowRight,
-  Zap,
   MapPin,
   MessageCircle,
 } from "lucide-react";
@@ -25,6 +22,11 @@ import heroSlide1 from "@/assets/hero-reception-1.jpg";
 import heroSlide2 from "@/assets/hero-reception-2.jpg";
 import heroSlide3 from "@/assets/hero-reception-3.jpg";
 import heroSlide4 from "@/assets/hero-reception-4.jpg";
+import implantImage from "@/assets/implant-1.jpg";
+import orthoImage from "@/assets/ortho-1.jpg";
+import cosmeticImage from "@/assets/cosmetic-result.jpg";
+import endodonticImage from "@/assets/endodontic-1.jpg";
+import pediatricImage from "@/assets/pediatric-treatment-1.jpg";
 
 const heroSlides = [
   { src: heroSlide1, alt: "Tori Speciality Dental Clinic reception with welcoming signage" },
@@ -34,11 +36,36 @@ const heroSlides = [
 ];
 
 const services = [
-  { icon: SmilePlus, title: "Prosthetic Tooth", desc: "State-of-the-art implant and tooth replacement options — both removable and fixed — with high patient satisfaction." },
-  { icon: Stethoscope, title: "Orthodontic Treatment", desc: "Clear aligners and conventional braces with custom treatment planning for complete smile adjustment." },
-  { icon: Zap, title: "Whitening & Cleaning", desc: "Professional teeth whitening and gentle cleaning to remove stains, plaque, and restore natural shine." },
-  { icon: Shield, title: "Endodontic & Restorative Care", desc: "Expert root canal and restorative treatments to save natural teeth and rebuild strength and comfort." },
-  { icon: Baby, title: "Pediatric Dental Care", desc: "Gentle care for growing smiles — preventive checkups and a child-friendly environment that builds confidence." },
+  {
+    image: implantImage,
+    alt: "Dental implant treatment",
+    title: "Prosthetic Tooth",
+    desc: "State-of-the-art implant and tooth replacement options — both removable and fixed — with high patient satisfaction.",
+  },
+  {
+    image: orthoImage,
+    alt: "Orthodontic braces treatment",
+    title: "Orthodontic Treatment",
+    desc: "Clear aligners and conventional braces with custom treatment planning for complete smile adjustment.",
+  },
+  {
+    image: cosmeticImage,
+    alt: "Professional teeth whitening",
+    title: "Whitening & Cleaning",
+    desc: "Professional teeth whitening and gentle cleaning to remove stains, plaque, and restore natural shine.",
+  },
+  {
+    image: endodonticImage,
+    alt: "Endodontic root canal treatment",
+    title: "Endodontic & Restorative Care",
+    desc: "Expert root canal and restorative treatments to save natural teeth and rebuild strength and comfort.",
+  },
+  {
+    image: pediatricImage,
+    alt: "Pediatric dental care",
+    title: "Pediatric Dental Care",
+    desc: "Gentle care for growing smiles — preventive checkups and a child-friendly environment that builds confidence.",
+  },
 ];
 
 const whyUs = [
@@ -147,8 +174,8 @@ const Index = () => {
             {services.map((s) => (
               <Card key={s.title} className="border-0 bg-card shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="flex flex-col items-center p-6 text-center">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <s.icon className="h-7 w-7" />
+                  <div className="mb-4 flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-primary/10">
+                    <img src={s.image} alt={s.alt} className="h-full w-full object-cover" />
                   </div>
                   <h3 className="mb-2 font-semibold text-foreground">{s.title}</h3>
                   <p className="text-sm text-muted-foreground">{s.desc}</p>
