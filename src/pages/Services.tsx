@@ -36,6 +36,8 @@ import implant1 from "@/assets/implant-1.jpg";
 import implant2 from "@/assets/implant-2.jpg";
 import implant3 from "@/assets/implant-3.jpeg";
 import implant4 from "@/assets/implant-4.jpeg";
+import implant5 from "@/assets/implant-5.jpg";
+import implant6 from "@/assets/implant-6.jpg";
 import cosBefore1 from "@/assets/cos-before-1.jpg";
 import cosAfter1 from "@/assets/cos-after-1.jpg";
 import cosBefore2 from "@/assets/cos-before-2.jpg";
@@ -64,8 +66,6 @@ import tmj4 from "@/assets/tmj-4.jpg";
 import emergency1 from "@/assets/emergency-1.jpg";
 import emergency2 from "@/assets/emergency-2.jpg";
 import emergency3 from "@/assets/emergency-3.jpg";
-import emergency4 from "@/assets/emergency-4.jpg";
-import emergency5 from "@/assets/emergency-5.jpg";
 import diagnosticVideo from "@/assets/diagnostic-procedures.mp4";
 import {
   Stethoscope,
@@ -141,7 +141,7 @@ const services = [
     title: "Dental Implants",
     desc: "Permanent tooth replacement with advanced implant solutions.",
     items: ["Dental implant placement (Immediate & Delayed)", "Bone grafting", "Sinus lift", "Ridge augmentation", "Implant uncovering", "Implant removal", "Implant maintenance"],
-    images: [implant1, implant2, implant3, implant4],
+    images: [implant1, implant2, implant3, implant4, implant5, implant6],
   },
   {
     icon: Heart,
@@ -195,7 +195,7 @@ const services = [
     title: "Dental Emergencies",
     desc: "Immediate emergency treatment available around the clock — because emergencies don't wait.",
     items: ["Pain management", "Dental trauma management", "Fractured tooth treatment", "Knocked-out tooth (avulsion) management", "Abscess drainage", "Emergency extractions"],
-    images: [emergency1, emergency2, emergency3, emergency4, emergency5],
+    images: [emergency1, emergency2, emergency3],
   },
   {
     icon: AlertTriangle,
