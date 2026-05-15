@@ -22,7 +22,7 @@ import heroSlide1 from "@/assets/hero-reception-1.jpg";
 import heroSlide2 from "@/assets/hero-reception-2.jpg";
 import heroSlide3 from "@/assets/hero-reception-3.jpg";
 import heroSlide4 from "@/assets/hero-reception-4.jpg";
-import implantImage from "@/assets/implant-1.jpg";
+import prosthoImage from "@/assets/prostho-after-4.jpg";
 import orthoImage from "@/assets/ortho-1.jpg";
 import cosmeticImage from "@/assets/cosmetic-result.jpg";
 import endodonticImage from "@/assets/endodontic-1.jpg";
@@ -37,7 +37,7 @@ const heroSlides = [
 
 const services = [
   {
-    image: implantImage,
+    image: prosthoImage,
     alt: "Dental implant treatment",
     title: "Prosthetic Tooth",
     desc: "State-of-the-art implant and tooth replacement options — both removable and fixed — with high patient satisfaction.",
