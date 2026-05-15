@@ -25,7 +25,7 @@ import heroSlide4 from "@/assets/hero-reception-4.jpg";
 import prosthoImage from "@/assets/prostho-after-4.jpg";
 import orthoImage from "@/assets/ortho-1.jpg";
 import cosmeticImage from "@/assets/cosmetic-result.jpg";
-import endodonticImage from "@/assets/endodontic-1.jpg";
+import endodonticImage from "@/assets/endodontic-4.jpg";
 import pediatricImage from "@/assets/pediatric-treatment-1.jpg";
 
 const heroSlides = [
